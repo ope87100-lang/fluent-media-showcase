@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  
+  <title>Marketing & Growth Insights Blog | Fluent Media</title>
+  <meta name="description" content="In-depth guides on Meta Ads scaling, GMB local SEO, viral short-form video editing, and server-side tracking by Zubair Jamil." />
+  <meta name="author" content="Zubair Jamil" />
+  <link rel="canonical" href="https://fluentmedia.agency/blog.html" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Three.js (r128) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#030610] text-slate-100 antialiased selection:bg-indigo-600 selection:text-white font-sans overflow-x-hidden relative">
+
+  <!-- Scroll Reading Progress Bar -->
+  <div id="scroll-progress-bar"></div>
+
+  <!-- 3D Interactive WebGL Background Canvas -->
+  <canvas id="three-bg-canvas"></canvas>
+
+  <!-- Top Announcement Bar with Emojis -->
+  <aside aria-label="Special Discount Announcement" class="bg-[#050917]/95 backdrop-blur-md border-b border-white/[0.06] text-slate-300 text-[11px] sm:text-xs py-2.5 overflow-hidden sticky top-0 z-50">
+    <div class="animate-marquee-track">
+      <div class="flex items-center gap-8 px-6 font-medium tracking-wide">
+        <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-[10px] uppercase font-bold tracking-wider">🔥 Limited Slots</span>
+        <span class="text-white font-semibold">فلیٹ 20% ڈسکاؤنٹ تمام ڈیجیٹل مارکیٹنگ سروسز پر (PKR میں)!</span>
+        <span class="text-slate-500">•</span>
+        <span class="text-amber-300 font-semibold">🎁 Free 30-Minute 1-on-1 Growth & Funnel Audit</span>
+        <span class="text-slate-500">•</span>
+        <span class="text-violet-300 font-semibold">🎮 Play Viral Ad Tycoon Game & Win Extra Discount!</span>
+        <span class="text-slate-500">•</span>
+        <span>🏆 Academic Gold Medalist Leadership (Zubair Jamil)</span>
+        <span class="text-slate-500">•</span>
+      </div>
+      <div class="flex items-center gap-8 px-6 font-medium tracking-wide" aria-hidden="true">
+        <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-[10px] uppercase font-bold tracking-wider">🔥 Limited Slots</span>
+        <span class="text-white font-semibold">فلیٹ 20% ڈسکاؤنٹ تمام ڈیجیٹل مارکیٹنگ سروسز پر (PKR میں)!</span>
+        <span class="text-slate-500">•</span>
+        <span class="text-amber-300 font-semibold">🎁 Free 30-Minute 1-on-1 Growth & Funnel Audit</span>
+        <span class="text-slate-500">•</span>
+        <span class="text-violet-300 font-semibold">🎮 Play Viral Ad Tycoon Game & Win Extra Discount!</span>
+        <span class="text-slate-500">•</span>
+        <span>🏆 Academic Gold Medalist Leadership (Zubair Jamil)</span>
+        <span class="text-slate-500">•</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Header / Navigation Bar -->
+  <header class="sticky top-9 left-0 right-0 z-40 apple-glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="https://i.postimg.cc/5X6rKV8G/fluent-media-marketing-serviecs.png" 
+             alt="Fluent Media Marketing Agency Logo" 
+             class="w-10 h-10 sm:w-11 sm:h-11 object-contain rounded-xl bg-white/5 p-1 border border-white/10 group-hover:scale-105 transition-transform" />
+        <div class="flex flex-col">
+          <span class="text-base sm:text-lg font-extrabold tracking-tight text-white font-display">Fluent<span class="text-indigo-400">Media</span></span>
+          <span class="text-[8px] sm:text-[9px] tracking-widest uppercase text-slate-400 font-semibold">Growth & Performance Agency</span>
+        </div>
+      </a>
+      
+      <nav class="hidden lg:flex items-center gap-6 text-xs font-semibold uppercase tracking-wider text-slate-300">
+        <a href="index.html" class="hover:text-indigo-400 transition-colors">Home</a>
+        <a href="about.html" class="hover:text-indigo-400 transition-colors">Our Story</a>
+        <a href="services.html" class="hover:text-indigo-400 transition-colors">Services</a>
+        <a href="portfolio.html" class="hover:text-indigo-400 transition-colors">Client Work</a>
+        <a href="qr.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><i class="fa-solid fa-qrcode"></i> QR Connect</a>
+        <a href="game.html" class="text-emerald-300 hover:text-emerald-200 transition-colors font-bold flex items-center gap-1.5"><i class="fa-solid fa-gamepad"></i> Game Arcade</a>
+        <a href="index.html#packages" class="text-amber-300 hover:text-amber-200 transition-colors font-bold">Pricing (PKR)</a>
+        <a href="contact.html" class="hover:text-indigo-400 transition-colors">Contact</a>
+      </nav>
+
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="tel:03294357248" class="text-xs font-semibold text-slate-300 hover:text-white flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/[0.04] border border-white/[0.08]">
+          <i class="fa-solid fa-phone text-indigo-400 text-xs"></i>
+          <span>0329 4357248</span>
+        </a>
+        <a href="https://wa.me/923294357248?text=Salam%20Zubair!%20I%20am%20reading%20your%20blog." target="_blank" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all shadow-md shadow-emerald-900/30 flex items-center gap-1.5">
+          <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
+        </a>
+      </div>
+
+      <button id="menu-btn" type="button" class="lg:hidden text-slate-300 focus:outline-none p-2 rounded-lg bg-white/5 border border-white/10" aria-label="Toggle Navigation Menu">
+        <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+    
+    <div id="mobile-menu" class="hidden lg:hidden px-6 py-6 bg-[#080d1e]/95 backdrop-blur-2xl border-b border-slate-800 space-y-3.5 text-xs font-semibold uppercase tracking-wider">
+      <a href="index.html" class="mobile-link block text-slate-300 hover:text-indigo-400 py-1.5">Home</a>
+      <a href="about.html" class="mobile-link block text-slate-300 hover:text-indigo-400 py-1.5">Our Story & Founder</a>
+      <a href="services.html" class="mobile-link block text-slate-300 hover:text-indigo-400 py-1.5">Full Digital Services</a>
+      <a href="portfolio.html" class="mobile-link block text-slate-300 hover:text-indigo-400 py-1.5">Client Projects & Work</a>
+      <a href="game.html" class="mobile-link block text-emerald-300 font-bold py-1.5 flex items-center gap-2"><i class="fa-solid fa-gamepad"></i> Game Arcade</a>
+      <a href="index.html#packages" class="mobile-link block text-amber-300 font-bold py-1.5">Pricing Packages (PKR)</a>
+      <a href="contact.html" class="mobile-link block text-slate-300 hover:text-indigo-400 py-1.5">Contact & Consultation</a>
+      <div class="pt-4 border-t border-slate-800 flex flex-col gap-2">
+        <a href="https://wa.me/923294357248" target="_blank" class="text-xs text-white bg-emerald-600 py-3 rounded-xl font-bold flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-base"></i> Direct WhatsApp
+        </a>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <section class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-[10px] font-bold uppercase tracking-widest mb-4">
+        Digital Growth Playbooks
+      </div>
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white font-display leading-tight">
+        Actionable Marketing Intel. <br />
+        <span class="gradient-indigo-violet">Zero Fluff, 100% Data.</span>
+      </h1>
+      <p class="mt-4 text-sm sm:text-base text-slate-300 font-light leading-relaxed">
+        Deep breakdowns on scaling Meta Ad funnels, dominating Google Maps in Lahore, and optimizing video watch retention by Academic Gold Medalist Zubair Jamil.
+      </p>
+    </div>
+
+    <!-- Featured Post Hero Card -->
+    <div class="apple-glass-card p-6 sm:p-10 mb-16 shadow-2xl">
+      <div class="grid lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6">
+          <div class="rounded-2xl overflow-hidden border border-white/10 h-64 sm:h-80 relative group">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80" 
+                 alt="How to Scale Meta Ads to 4.7x ROAS" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-indigo-600 text-[10px] font-extrabold uppercase tracking-wider text-white shadow">
+              Featured Guide
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 space-y-4">
+          <div class="flex items-center gap-3 text-xs text-indigo-300">
+            <span>Meta Ads Strategy</span>
+            <span>•</span>
+            <span>8 Min Read</span>
+            <span>•</span>
+            <span>By Zubair Jamil</span>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-display leading-snug">
+            <a href="blog-post.html" class="hover:text-indigo-400 transition-colors">
+              How to Scale Meta Ads to 4.7x ROAS in 2026: The Algorithmic Creative Blueprint
+            </a>
+          </h2>
+
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
+            With iOS tracking updates and automated Advantage+ bidding, old media buying tricks are dead. Discover how to engineer dynamic creative funnels that train Meta's neural networks to deliver consistent buyers.
+          </p>
+
+          <div class="pt-2">
+            <a href="blog-post.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md shadow-indigo-600/25">
+              Read Full Strategy Guide <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-20">
+      
+      <!-- Article 1: GMB Local SEO -->
+      <article class="apple-glass-card p-6 flex flex-col justify-between group">
+        <div>
+          <div class="relative overflow-hidden h-48 rounded-2xl mb-4 border border-white/10">
+            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80" alt="GMB Local Map Ranking Guide" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute top-2.5 right-2.5 px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[10px] font-bold">
+              Local SEO
+            </div>
+          </div>
+          <p class="text-[11px] text-slate-400 mb-1">5 Min Read • GMB Ranking</p>
+          <h3 class="text-base font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+            The Complete GMB Local SEO Blueprint for Lahore Businesses in 2026
+          </h3>
+          <p class="text-xs text-slate-400 font-light leading-relaxed mb-4">
+            How category hierarchy, geo-tagged photos, and citation velocity force Google's local algorithm to place your business into the top 3 Map Pack.
+          </p>
+        </div>
+        <a href="blog-post.html" class="text-xs font-bold text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5">
+          Read Guide <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+      </article>
+
+      <!-- Article 2: Viral Video Reels Psychology -->
+      <article class="apple-glass-card p-6 flex flex-col justify-between group">
+        <div>
+          <div class="relative overflow-hidden h-48 rounded-2xl mb-4 border border-white/10">
+            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80" alt="Viral Video Editing Hooks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute top-2.5 right-2.5 px-2.5 py-0.5 rounded-full bg-violet-500/20 text-violet-300 border border-violet-500/30 text-[10px] font-bold">
+              Video Editing
+            </div>
+          </div>
+          <p class="text-[11px] text-slate-400 mb-1">6 Min Read • Viral Video</p>
+          <h3 class="text-base font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+            Short-Form Video Psychology: 3 Hooks That Capture 80% Viewer Retention
+          </h3>
+          <p class="text-xs text-slate-400 font-light leading-relaxed mb-4">
+            Why the first 3 seconds dictate 95% of a video reel's reach. Pacing breakdown, audio cue triggers, and kinetic typography structures.
+          </p>
+        </div>
+        <a href="blog-post.html" class="text-xs font-bold text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5">
+          Read Guide <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+      </article>
+
+      <!-- Article 3: Server CAPI -->
+      <article class="apple-glass-card p-6 flex flex-col justify-between group">
+        <div>
+          <div class="relative overflow-hidden h-48 rounded-2xl mb-4 border border-white/10">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Server CAPI Tracking Recovery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute top-2.5 right-2.5 px-2.5 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 text-[10px] font-bold">
+              Data & Tracking
+            </div>
+          </div>
+          <p class="text-[11px] text-slate-400 mb-1">7 Min Read • CAPI & GTM</p>
+          <h3 class="text-base font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+            Why Server-Side CAPI Tracking is Non-Negotiable for E-Commerce Brands
+          </h3>
+          <p class="text-xs text-slate-400 font-light leading-relaxed mb-4">
+            Stop letting ad blockers blind your Meta and Google algorithms. How server-side tracking restores lost attribution and stabilizes ad account ROAS.
+          </p>
+        </div>
+        <a href="blog-post.html" class="text-xs font-bold text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5">
+          Read Guide <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+      </article>
+
+    </div>
+
+    <!-- Newsletter & Growth Audit Box -->
+    <div class="apple-glass-interactive p-8 sm:p-12 rounded-3xl max-w-4xl mx-auto border border-indigo-500/30 text-center shadow-2xl">
+      <h3 class="text-2xl font-bold text-white font-display mb-2">
+        Get Weekly Growth Insights Directly in Your Inbox
+      </h3>
+      <p class="text-xs sm:text-sm text-slate-300 max-w-lg mx-auto mb-6 font-light">
+        Join hundreds of business founders and marketers receiving Zubair Jamil's private ad strategies, algorithm updates, and creative breakdowns.
+      </p>
+      <form onsubmit="event.preventDefault(); alert('Thank you for subscribing! You will receive our latest marketing guides.'); this.reset();" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input type="email" required placeholder="Enter your business email..." class="flex-1 px-4 py-3 rounded-xl bg-white/[0.05] border border-white/10 text-white text-xs placeholder-slate-500 focus:outline-none focus:border-indigo-500" />
+        <button type="submit" class="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md">
+          Subscribe Free
+        </button>
+      </form>
+    </div>
+
+  </section>
+
+  <!-- Clean Master Footer -->
+  <footer class="bg-[#02040a] border-t border-white/[0.06] pt-14 sm:pt-16 pb-12 text-slate-400 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 mb-12">
+        <div class="lg:col-span-4 space-y-4">
+          <a href="index.html" class="flex items-center gap-3.5">
+            <img src="https://i.postimg.cc/5X6rKV8G/fluent-media-marketing-serviecs.png" alt="Fluent Media Logo" class="w-9 h-9 object-contain rounded-lg bg-white/5 p-1 border border-white/10" />
+            <span class="text-lg font-extrabold tracking-tight text-white font-display">Fluent<span class="text-indigo-400">Media</span></span>
+          </a>
+          <p class="text-xs text-slate-400 leading-relaxed pr-4 font-light">
+            Founded by certified strategist and Academic Gold Medalist Zubair Jamil. High-impact social media management, algorithmic ad funnels, and turnkey digital growth.
+          </p>
+        </div>
+        <div class="lg:col-span-3 space-y-3">
+          <p class="text-xs font-bold text-white uppercase tracking-wider mb-4 font-display">Pages</p>
+          <ul class="space-y-2 text-xs text-slate-400 font-light">
+            <li><a href="index.html" class="hover:text-indigo-400 transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-indigo-400 transition-colors">About Zubair Jamil</a></li>
+            <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Services</a></li>
+            <li><a href="portfolio.html" class="hover:text-indigo-400 transition-colors">Portfolio</a></li>
+            <li><a href="blog.html" class="text-indigo-400 font-bold">Blog</a></li>
+            <li><a href="contact.html" class="hover:text-indigo-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-5 space-y-3">
+          <p class="text-xs font-bold text-white uppercase tracking-wider mb-4 font-display">Direct Contact</p>
+          <ul class="space-y-2.5 text-xs text-slate-400 font-light">
+            <li><i class="fa-brands fa-whatsapp text-emerald-400 mr-2"></i> WhatsApp: 0329 4357248 (+92 329 4357248)</li>
+            <li><i class="fa-solid fa-envelope text-indigo-400 mr-2"></i> Email: info.zubairansari@gmail.com</li>
+            <li><i class="fa-solid fa-location-dot text-indigo-400 mr-2"></i> Lahore, Punjab, Pakistan (Global Services)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-white/[0.06] text-center text-xs text-slate-500">
+        &copy; 2026 Fluent Media. All rights reserved. Founded by Zubair Jamil.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Floating iOS 17 Bottom Action Dock -->
+  <div class="mobile-action-dock sm:hidden">
+    <a href="tel:03294357248" class="mobile-dock-btn">
+      <i class="fa-solid fa-phone text-indigo-400"></i>
+      <span>Call</span>
+    </a>
+    <a href="https://wa.me/923294357248" target="_blank" class="mobile-dock-btn">
+      <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+      <span>WhatsApp</span>
+    </a>
+    <a href="game.html" class="mobile-dock-btn">
+      <i class="fa-solid fa-gamepad text-violet-400"></i>
+      <span>Play Game</span>
+    </a>
+    <a href="index.html#packages" class="mobile-dock-btn">
+      <i class="fa-solid fa-tag text-amber-400"></i>
+      <span>PKR Plans</span>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/three-bg.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/chatbot.js"></script>
+</body>
+</html>

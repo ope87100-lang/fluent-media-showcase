@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.tmp
+*.log
+inspect_site.py
+generate_fluent_qr.py
+*.zip
+.vscode/
+.idea/

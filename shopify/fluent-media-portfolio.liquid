@@ -1,0 +1,236 @@
+{% comment %}
+  Fluent Media - 3D Interactive Agency Portfolio Section for Shopify
+  Founder: Zubair Jamil (Academic Gold Medalist)
+  Contact: info.zubairansari@gmail.com | WhatsApp: +923294357248
+  Compatible with all Shopify Themes (Dawn, Impulse, Prestige, Sense, etc.)
+{% endcomment %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+  .fm-shopify-wrapper {
+    background-color: #030610;
+    color: #f1f5f9;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .fm-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  .fm-glass-card {
+    background: rgba(15, 22, 41, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 24px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  .fm-glass-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(99, 102, 241, 0.5);
+    background: rgba(22, 31, 56, 0.85);
+  }
+  .fm-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 36px;
+  }
+  .fm-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    background: rgba(99, 102, 241, 0.15);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    color: #a5b4fc;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .fm-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-top: 14px;
+    line-height: 1.2;
+  }
+  .fm-subtitle {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-top: 10px;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+  .fm-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    cursor: pointer;
+  }
+  .fm-btn-primary {
+    background: #4f46e5;
+    color: #ffffff;
+  }
+  .fm-btn-primary:hover {
+    background: #4338ca;
+  }
+  .fm-btn-wa {
+    background: #10b981;
+    color: #ffffff;
+  }
+  .fm-btn-wa:hover {
+    background: #059669;
+  }
+  .fm-img-box {
+    width: 100%;
+    height: 180px;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .fm-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .fm-social-links {
+    display: flex;
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .fm-social-btn {
+    flex: 1;
+    padding: 8px;
+    text-align: center;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+  }
+  .fm-social-btn:hover {
+    background: rgba(99, 102, 241, 0.2);
+    color: #ffffff;
+  }
+</style>
+
+<div class="fm-shopify-wrapper">
+  <div class="fm-container">
+    
+    <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+      <span class="fm-badge">
+        <i class="fa-solid fa-award" style="color: #f59e0b;"></i> Academic Gold Medalist Leadership
+      </span>
+      <h2 class="fm-title">{{ section.settings.heading | default: 'Fluent Media | Digital Growth & Performance Portfolio' }}</h2>
+      <p class="fm-subtitle">{{ section.settings.subheading | default: 'Scalable Meta ad funnels, GMB local map ranking, and high-retention video reels engineered by certified strategist Zubair Jamil.' }}</p>
+    </div>
+
+    <!-- Verified Client Case Studies Grid -->
+    <div class="fm-grid">
+      
+      <!-- Card 1 -->
+      <div class="fm-glass-card">
+        <div class="fm-img-box">
+          <img src="https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?auto=format&fit=crop&w=600&q=80" alt="Syed Shah Husban Bukhari PTI">
+        </div>
+        <h3 style="font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 4px;">Syed Shah Husban Bukhari</h3>
+        <p style="font-size: 11px; color: #34d399; font-weight: 600; margin-bottom: 8px;">@syedshahhusban • Political Public Figure</p>
+        <p style="font-size: 12px; color: #94a3b8; line-height: 1.5;">Complete digital political campaign architecture, live press releases, and crowd engagement media.</p>
+        <div class="fm-social-links">
+          <a href="https://www.instagram.com/syedshahhusban/" target="_blank" class="fm-social-btn">Instagram</a>
+          <a href="https://www.facebook.com/syedshahhusban" target="_blank" class="fm-social-btn">Facebook</a>
+          <a href="https://x.com/SyedHSBukhari" target="_blank" class="fm-social-btn">X / Twitter</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="fm-glass-card">
+        <div class="fm-img-box">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Lithora Surfaces">
+        </div>
+        <h3 style="font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 4px;">Lithora Surfaces</h3>
+        <p style="font-size: 11px; color: #818cf8; font-weight: 600; margin-bottom: 8px;">@lithora_surfaces • Architectural Marble</p>
+        <p style="font-size: 12px; color: #94a3b8; line-height: 1.5;">Architectural surface presentations, luxury marble feed curation, and B2B high-ticket client lead funnels.</p>
+        <div class="fm-social-links">
+          <a href="https://www.instagram.com/lithora_surfaces/" target="_blank" class="fm-social-btn">Instagram</a>
+          <a href="https://www.facebook.com/LithoraOfficial" target="_blank" class="fm-social-btn">Facebook</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="fm-glass-card">
+        <div class="fm-img-box">
+          <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80" alt="House of Biryan">
+        </div>
+        <h3 style="font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 4px;">House of Biryan</h3>
+        <p style="font-size: 11px; color: #fbbf24; font-weight: 600; margin-bottom: 8px;">@houseofbiryan_india • Food Hospitality</p>
+        <p style="font-size: 12px; color: #94a3b8; line-height: 1.5;">High-engagement viral food video editing, dynamic reels pacing, and local audience acquisition funnels.</p>
+        <div class="fm-social-links">
+          <a href="https://www.instagram.com/houseofbiryan_india/" target="_blank" class="fm-social-btn" style="flex: 1;">Visit Official Instagram</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Direct CTA Bar -->
+    <div style="margin-top: 40px; padding: 24px; border-radius: 16px; background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.3); text-align: center;">
+      <h4 style="font-size: 18px; font-weight: 800; color: #fff; margin-bottom: 6px;">Want to discuss a growth roadmap for your store?</h4>
+      <p style="font-size: 12px; color: #cbd5e1; margin-bottom: 16px;">Speak directly with Zubair Jamil (Founder & Head Growth Strategist).</p>
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://wa.me/923294357248?text=Hello%20Zubair!%20I%20saw%20your%20Shopify%20portfolio%20section." target="_blank" class="fm-btn fm-btn-wa">
+          <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp (0329 4357248)
+        </a>
+        <a href="mailto:info.zubairansari@gmail.com" class="fm-btn fm-btn-primary">
+          <i class="fa-solid fa-envelope"></i> Email: info.zubairansari@gmail.com
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Fluent Media Portfolio",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Fluent Media | Digital Growth & Performance Portfolio"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Scalable Meta ad funnels, GMB local map ranking, and high-retention video reels engineered by certified strategist Zubair Jamil."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fluent Media Portfolio"
+    }
+  ]
+}
+{% endschema %}

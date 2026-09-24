@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  
+  <title>About Zubair Jamil | Founder & Growth Strategist | Fluent Media</title>
+  <meta name="description" content="Learn about Zubair Jamil, Academic Gold Medalist, certified growth strategist, and founder of Fluent Media. Discover our data-backed approach to digital marketing." />
+  <meta name="author" content="Zubair Jamil" />
+  <link rel="canonical" href="https://fluentmedia.agency/about.html" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Three.js (r128) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#030610] text-slate-100 antialiased selection:bg-indigo-600 selection:text-white font-sans overflow-x-hidden relative">
+
+  <!-- Scroll Reading Progress Bar -->
+  <div id="scroll-progress-bar"></div>
+
+  <!-- 3D Interactive WebGL Background Canvas -->
+  <canvas id="three-bg-canvas"></canvas>
+
+  <!-- Top Announcement Bar with Emojis -->
+  <aside aria-label="Special Discount Announcement" class="bg-[#050917]/95 backdrop-blur-md border-b border-white/[0.06] text-slate-300 text-[11px] sm:text-xs py-2.5 overflow-hidden sticky top-0 z-50">
+    <div class="animate-marquee-track">
+      <div class="flex items-center gap-8 px-6 font-medium tracking-wide">
+        <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-[10px] uppercase font-bold tracking-wider">🔥 Limited Slots</span>
+        <span class="text-white font-semibold">فلیٹ 20% ڈسکاؤنٹ تمام ڈیجیٹل مارکیٹنگ سروسز پر (PKR میں)!</span>
+        <span class="text-slate-500">•</span>
+        <span class="text-amber-300 font-semibold">🎁 Free 30-Minute 1-on-1 Growth & Funnel Audit</span>
+        <span class="text-slate-500">•</span>
+        <span class="text-violet-300 font-semibold">🎮 Play Viral Ad Tycoon Game & Win Extra Discount!</span>
+        <span class="text-slate-500">•</span>
+        <span>🏆 Academic Gold Medalist Leadership (Zubair Jamil)</span>
+        <span class="text-slate-500">•</span>
+      </div>
+      <div class="flex items-center gap-8 px-6 font-medium tracking-wide" aria-hidden="true">
+        <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-[10px] uppercase font-bold tracking-wider">🔥 Limited Slots</span>
+        <span class="text-white font-semibold">فلیٹ 20% ڈسکاؤنٹ تمام ڈیجیٹل مارکیٹنگ سروسز پر (PKR میں)!</span>
+        <span class="text-slate-500">•</span>
+        <span class="text-amber-300 font-semibold">🎁 Free 30-Minute 1-on-1 Growth & Funnel Audit</span>
+        <span class="text-slate-500">•</span>
+        <span class="text-violet-300 font-semibold">🎮 Play Viral Ad Tycoon Game & Win Extra Discount!</span>
+        <span class="text-slate-500">•</span>
+        <span>🏆 Academic Gold Medalist Leadership (Zubair Jamil)</span>
+        <span class="text-slate-500">•</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Header / Navigation Bar -->
+  <header class="sticky top-9 left-0 right-0 z-40 apple-glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="https://i.postimg.cc/5X6rKV8G/fluent-media-marketing-serviecs.png" 
+             alt="Fluent Media Marketing Agency Logo" 
+             class="w-10 h-10 sm:w-11 sm:h-11 object-contain rounded-xl bg-white/5 p-1 border border-white/10 group-hover:scale-105 transition-transform" />
+        <div class="flex flex-col">
+          <span class="text-base sm:text-lg font-extrabold tracking-tight text-white font-display">Fluent<span class="text-indigo-400">Media</span></span>
+          <span class="text-[8px] sm:text-[9px] tracking-widest uppercase text-slate-400 font-semibold">Growth & Performance Agency</span>
+        </div>
+      </a>
+      
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden lg:flex items-center gap-6 text-xs font-semibold uppercase tracking-wider text-slate-300">
+        <a href="index.html" class="hover:text-indigo-400 transition-colors">Home</a>
+        <a href="about.html" class="text-indigo-400 font-bold border-b border-indigo-400 pb-0.5">Our Story</a>
+        <a href="services.html" class="hover:text-indigo-400 transition-colors">Services</a>
+        <a href="portfolio.html" class="hover:text-indigo-400 transition-colors">Client Work</a>
+        <a href="qr.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><i class="fa-solid fa-qrcode"></i> QR Connect</a>
+        <a href="game.html" class="text-emerald-300 hover:text-emerald-200 transition-colors font-bold flex items-center gap-1.5"><i class="fa-solid fa-gamepad"></i> Game Arcade</a>
+        <a href="index.html#packages" class="text-amber-300 hover:text-amber-200 transition-colors font-bold">Pricing (PKR)</a>
+        <a href="contact.html" class="hover:text-indigo-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="tel:03294357248" class="text-xs font-semibold text-slate-300 hover:text-white flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/[0.04] border border-white/[0.08]">
+          <i class="fa-solid fa-phone text-indigo-400 text-xs"></i>
+          <span>0329 4357248</span>
+        </a>
+        <a href="https://wa.me/923294357248?text=Salam%20Zubair!%20I%20read%20your%20story%20and%20want%20to%20consult." target="_blank" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all shadow-md shadow-emerald-900/30 flex items-center gap-1.5">
+          <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="menu-btn" type="button" class="lg:hidden text-slate-300 focus:outline-none p-2 rounded-lg bg-white/5 border border-white/10" aria-label="Toggle Navigation Menu">
+        <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+    
+    <div id="mobile-menu" class="hidden lg:hidden px-6 py-6 bg-[#080d1e]/95 backdrop-blur-2xl border-b border-slate-800 space-y-3.5 text-xs font-semibold uppercase tracking-wider">
+      <a href="index.html" class="mobile-link block text-slate-300 hover:text-indigo-400 py-1.5">Home</a>
+      <a href="about.html" class="mobile-link block text-indigo-400 font-bold py-1.5">Our Story & Founder</a>
+      <a href="services.html" class="mobile-link block text-slate-300 hover:text-indigo-400 py-1.5">Full Digital Services</a>
+      <a href="portfolio.html" class="mobile-link block text-slate-300 hover:text-indigo-400 py-1.5">Client Projects & Work</a>
+      <a href="game.html" class="mobile-link block text-emerald-300 font-bold py-1.5 flex items-center gap-2"><i class="fa-solid fa-gamepad"></i> Game Arcade</a>
+      <a href="index.html#packages" class="mobile-link block text-amber-300 font-bold py-1.5">Pricing Packages (PKR)</a>
+      <a href="contact.html" class="mobile-link block text-slate-300 hover:text-indigo-400 py-1.5">Contact & Consultation</a>
+      <div class="pt-4 border-t border-slate-800 flex flex-col gap-2">
+        <a href="https://wa.me/923294357248" target="_blank" class="text-xs text-white bg-emerald-600 py-3 rounded-xl font-bold flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-base"></i> Direct WhatsApp
+        </a>
+    </div>
+  </header>
+
+  <!-- Hero / Header -->
+  <section class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-[10px] font-bold uppercase tracking-widest mb-4">
+        Founder & Strategic Lead
+      </div>
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white font-display leading-tight">
+        Engineered For Impact. <br />
+        <span class="gradient-indigo-violet">Driven By Uncompromising Standards.</span>
+      </h1>
+      <p class="mt-4 text-sm sm:text-base text-slate-300 font-light leading-relaxed">
+        Fluent Media was founded by Academic Gold Medalist Zubair Jamil to challenge generic agency practices with algorithmic rigor, conversion psychology, and dedicated founder accountability.
+      </p>
+    </div>
+
+    <!-- Main Founder Showcase Card -->
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center apple-glass-card p-6 sm:p-12 mb-20 shadow-2xl">
+      <div class="lg:col-span-5">
+        <div class="founder-img-container rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+          <img src="https://files.catbox.moe/mhlqby.jpeg" 
+               alt="Zubair Jamil - Academic Gold Medalist & Founder of Fluent Media" 
+               class="w-full h-full object-cover" />
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 space-y-6">
+        <div class="flex items-center gap-3">
+          <span class="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs font-bold flex items-center gap-1.5">
+            <i class="fa-solid fa-medal text-amber-400"></i> Academic Gold Medalist
+          </span>
+          <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs font-bold flex items-center gap-1.5">
+            <i class="fa-solid fa-star text-emerald-400"></i> 4.9★ Fiverr Top Rated
+          </span>
+        </div>
+
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-display">
+          Meet Zubair Jamil (Zubair Ansari)
+        </h2>
+
+        <p class="text-slate-300 text-sm leading-relaxed font-light">
+          In an industry saturated with outsourced junior teams and inflated vanity metrics, Zubair established Fluent Media with a singular vision: treating digital growth as an empirical science.
+        </p>
+
+        <p class="text-slate-400 text-sm leading-relaxed font-light">
+          Having achieved top honors and an Academic Gold Medal, Zubair applies the same discipline to paid ad architectures, server-side data models, and social video hooks. Whether running multi-channel campaigns for PTI political leaders like Syed Shah Husban Bukhari or scaling luxury e-commerce brands internationally, every campaign is supervised directly by Zubair.
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-4 pt-2">
+          <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/[0.07]">
+            <p class="text-xs font-bold text-white uppercase tracking-wider mb-1">Direct Founder Oversight</p>
+            <p class="text-[11px] text-slate-400 font-light">Every ad copy, audience model, and video cut is reviewed and fine-tuned by Zubair personally.</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/[0.07]">
+            <p class="text-xs font-bold text-white uppercase tracking-wider mb-1">140+ Projects Delivered</p>
+            <p class="text-[11px] text-slate-400 font-light">Across Pakistan, USA, UK, Canada, and the Middle East with a verified 4.9-star satisfaction rate.</p>
+          </div>
+        </div>
+
+        <div class="pt-2 flex flex-wrap gap-3">
+          <a href="https://wa.me/923294357248" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider transition-all flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Direct WhatsApp (+92 329 4357248)
+          </a>
+          <a href="mailto:info.zubairansari@gmail.com" class="px-6 py-3 rounded-xl bg-white/[0.05] hover:bg-white/10 text-slate-200 font-bold text-xs uppercase tracking-wider transition-all flex items-center gap-2 border border-white/10">
+            <i class="fa-solid fa-envelope text-indigo-400 text-sm"></i> info.zubairansari@gmail.com
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Agency Core Philosophy -->
+    <div class="mb-24">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h3 class="text-xs uppercase tracking-widest font-extrabold text-indigo-400 mb-2">Our Operating System</h3>
+        <p class="text-2xl sm:text-3xl font-bold text-white font-display">Four Non-Negotiable Standards</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-6 rounded-3xl apple-glass-card">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center text-xl mb-4 border border-indigo-500/30">
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+          <h4 class="text-base font-bold text-white mb-2">Zero Vanity Metrics</h4>
+          <p class="text-xs text-slate-400 leading-relaxed font-light">
+            We don’t celebrate impressions that do not translate into brand authority, qualified inquiries, or documented purchases.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-3xl apple-glass-card">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center text-xl mb-4 border border-emerald-500/30">
+            <i class="fa-solid fa-server"></i>
+          </div>
+          <h4 class="text-base font-bold text-white mb-2">Server-Side Data</h4>
+          <p class="text-xs text-slate-400 leading-relaxed font-light">
+            We bypass browser cookie loss with Meta Server-Side Conversions API (CAPI) and Google Tag Manager server containers.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-3xl apple-glass-card">
+          <div class="w-12 h-12 rounded-2xl bg-amber-600/20 text-amber-400 flex items-center justify-center text-xl mb-4 border border-amber-500/30">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h4 class="text-base font-bold text-white mb-2">Algorithmic Pacing</h4>
+          <p class="text-xs text-slate-400 leading-relaxed font-light">
+            Our short-form video reels utilize psychological hooks and dynamic kinetic typography engineered to trigger algorithmic distribution.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-3xl apple-glass-card">
+          <div class="w-12 h-12 rounded-2xl bg-purple-600/20 text-purple-400 flex items-center justify-center text-xl mb-4 border border-purple-500/30">
+            <i class="fa-solid fa-user-shield"></i>
+          </div>
+          <h4 class="text-base font-bold text-white mb-2">Founder Integrity</h4>
+          <p class="text-xs text-slate-400 leading-relaxed font-light">
+            Honest reporting, transparent ad spending dashboards, and live screen-share Zoom audits every step of the journey.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Growth Timeline -->
+    <div class="max-w-4xl mx-auto mb-20">
+      <div class="text-center max-w-xl mx-auto mb-12">
+        <h3 class="text-xs uppercase tracking-widest font-extrabold text-indigo-400 mb-2">Our Evolution</h3>
+        <p class="text-2xl sm:text-3xl font-bold text-white font-display">The Path to Performance</p>
+      </div>
+
+      <div class="space-y-6 relative border-l-2 border-indigo-500/30 ml-4 sm:ml-8 pl-6 sm:pl-8">
+        <div class="relative">
+          <span class="absolute -left-[35px] sm:-left-[43px] top-1 w-5 h-5 rounded-full bg-indigo-600 border-4 border-[#030610]"></span>
+          <div class="apple-glass-card p-5">
+            <span class="text-[10px] uppercase font-bold text-indigo-400 tracking-wider">2022 • Foundation & Honors</span>
+            <h4 class="text-base font-bold text-white mt-1">Academic Gold Medal & Launch of Performance Lab</h4>
+            <p class="text-xs text-slate-400 mt-1 font-light leading-relaxed">
+              Zubair Jamil graduated at the top of his class with an Academic Gold Medal, and transitioned directly into scaling performance ad strategies for regional business accounts.
+            </p>
+          </div>
+        </div>
+
+        <div class="relative">
+          <span class="absolute -left-[35px] sm:-left-[43px] top-1 w-5 h-5 rounded-full bg-emerald-500 border-4 border-[#030610]"></span>
+          <div class="apple-glass-card p-5">
+            <span class="text-[10px] uppercase font-bold text-emerald-400 tracking-wider">2023 • E-Commerce & Global Expansion</span>
+            <h4 class="text-base font-bold text-white mt-1">Scaling Over 50+ Direct-to-Consumer Brands</h4>
+            <p class="text-xs text-slate-400 mt-1 font-light leading-relaxed">
+              Established high-converting Meta and Google Ads funnels for international fashion, cosmetics, and lifestyle brands in Pakistan, the US, and the Gulf.
+            </p>
+          </div>
+        </div>
+
+        <div class="relative">
+          <span class="absolute -left-[35px] sm:-left-[43px] top-1 w-5 h-5 rounded-full bg-amber-400 border-4 border-[#030610]"></span>
+          <div class="apple-glass-card p-5">
+            <span class="text-[10px] uppercase font-bold text-amber-400 tracking-wider">2024 • High-Stakes Public PR</span>
+            <h4 class="text-base font-bold text-white mt-1">Political Social Media Leadership & Influencer Architecture</h4>
+            <p class="text-xs text-slate-400 mt-1 font-light leading-relaxed">
+              Appointed to engineer political digital campaigns for notable figures including Syed Shah Husban Bukhari (PTI), alongside luxury architectural brands like Lithora Surfaces.
+            </p>
+          </div>
+        </div>
+
+        <div class="relative">
+          <span class="absolute -left-[35px] sm:-left-[43px] top-1 w-5 h-5 rounded-full bg-purple-500 border-4 border-[#030610]"></span>
+          <div class="apple-glass-card p-5">
+            <span class="text-[10px] uppercase font-bold text-purple-400 tracking-wider">2025–2026 • Full-Stack Omnichannel & AI</span>
+            <h4 class="text-base font-bold text-white mt-1">Fluent Media Growth Ecosystem & AI Concierge</h4>
+            <p class="text-xs text-slate-400 mt-1 font-light leading-relaxed">
+              Pioneered 3D interactive web experiences, AI-assisted lead management, and omnichannel marketing retainers serving clients across 8 countries.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom CTA Banner -->
+    <div class="apple-glass-interactive p-8 sm:p-12 rounded-3xl text-center max-w-4xl mx-auto border border-indigo-500/30 shadow-2xl">
+      <h3 class="text-2xl sm:text-3xl font-extrabold text-white font-display mb-3">
+        Ready to Work Directly With Zubair Jamil?
+      </h3>
+      <p class="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto mb-8 font-light">
+        Schedule your free 30-minute Zoom audit today to review your current marketing bottlenecks and receive a personalized scaling blueprint.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="https://wa.me/923294357248?text=Hello%20Zubair!%20I%20want%20to%20book%20a%20Free%20Zoom%20Audit." target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider transition-all flex items-center gap-2">
+          <i class="fa-brands fa-whatsapp text-base"></i> Book on WhatsApp
+        </a>
+        <a href="contact.html" class="px-8 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-indigo-600/25">
+          Submit Project Inquiry
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clean Master Footer -->
+  <footer class="bg-[#02040a] border-t border-white/[0.06] pt-14 sm:pt-16 pb-12 text-slate-400 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 mb-12">
+        <div class="lg:col-span-4 space-y-4">
+          <a href="index.html" class="flex items-center gap-3.5">
+            <img src="https://i.postimg.cc/5X6rKV8G/fluent-media-marketing-serviecs.png" alt="Fluent Media Logo" class="w-9 h-9 object-contain rounded-lg bg-white/5 p-1 border border-white/10" />
+            <span class="text-lg font-extrabold tracking-tight text-white font-display">Fluent<span class="text-indigo-400">Media</span></span>
+          </a>
+          <p class="text-xs text-slate-400 leading-relaxed pr-4 font-light">
+            Founded by certified strategist and Academic Gold Medalist Zubair Jamil. High-impact social media management, algorithmic ad funnels, and turnkey digital growth.
+          </p>
+        </div>
+        <div class="lg:col-span-3 space-y-3">
+          <p class="text-xs font-bold text-white uppercase tracking-wider mb-4 font-display">Pages</p>
+          <ul class="space-y-2 text-xs text-slate-400 font-light">
+            <li><a href="index.html" class="hover:text-indigo-400 transition-colors">Home</a></li>
+            <li><a href="about.html" class="text-indigo-400 font-bold">About Zubair Jamil</a></li>
+            <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Services</a></li>
+            <li><a href="portfolio.html" class="hover:text-indigo-400 transition-colors">Portfolio</a></li>
+            <li><a href="blog.html" class="hover:text-indigo-400 transition-colors">Blog</a></li>
+            <li><a href="contact.html" class="hover:text-indigo-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-5 space-y-3">
+          <p class="text-xs font-bold text-white uppercase tracking-wider mb-4 font-display">Direct Contact</p>
+          <ul class="space-y-2.5 text-xs text-slate-400 font-light">
+            <li><i class="fa-brands fa-whatsapp text-emerald-400 mr-2"></i> WhatsApp: 0329 4357248 (+92 329 4357248)</li>
+            <li><i class="fa-solid fa-envelope text-indigo-400 mr-2"></i> Email: info.zubairansari@gmail.com</li>
+            <li><i class="fa-solid fa-location-dot text-indigo-400 mr-2"></i> Lahore, Punjab, Pakistan (Global Services)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-white/[0.06] text-center text-xs text-slate-500">
+        &copy; 2026 Fluent Media. All rights reserved. Founded by Zubair Jamil.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Floating iOS 17 Bottom Action Dock -->
+  <div class="mobile-action-dock sm:hidden">
+    <a href="tel:03294357248" class="mobile-dock-btn">
+      <i class="fa-solid fa-phone text-indigo-400"></i>
+      <span>Call</span>
+    </a>
+    <a href="https://wa.me/923294357248" target="_blank" class="mobile-dock-btn">
+      <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+      <span>WhatsApp</span>
+    </a>
+    <a href="game.html" class="mobile-dock-btn">
+      <i class="fa-solid fa-gamepad text-violet-400"></i>
+      <span>Play Game</span>
+    </a>
+    <a href="index.html#packages" class="mobile-dock-btn">
+      <i class="fa-solid fa-tag text-amber-400"></i>
+      <span>PKR Plans</span>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/three-bg.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/chatbot.js"></script>
+</body>
+</html>

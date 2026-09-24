@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  
+  <title>How to Scale Meta Ads to 4.7x ROAS in 2026 | Fluent Media</title>
+  <meta name="description" content="Step-by-step masterclass on scaling Meta Ads to 4.7x ROAS using algorithmic creative funnels and server-side CAPI tracking by Zubair Jamil." />
+  <meta name="author" content="Zubair Jamil" />
+  <link rel="canonical" href="https://fluentmedia.agency/blog-post.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How to Scale Meta Ads to 4.7x ROAS in 2026: Algorithmic Creative Blueprint" />
+  <meta property="og:description" content="Stop burning ad budget on outdated tactics. Learn how Zubair Jamil structures high-converting Meta Ad campaigns." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Three.js (r128) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#030610] text-slate-100 antialiased selection:bg-indigo-600 selection:text-white font-sans overflow-x-hidden relative">
+
+  <!-- Scroll Reading Progress Bar -->
+  <div id="scroll-progress-bar"></div>
+
+  <!-- 3D Interactive WebGL Background Canvas -->
+  <canvas id="three-bg-canvas"></canvas>
+
+  <!-- Top Announcement Bar with Emojis -->
+  <aside aria-label="Special Discount Announcement" class="bg-[#050917]/95 backdrop-blur-md border-b border-white/[0.06] text-slate-300 text-[11px] sm:text-xs py-2.5 overflow-hidden sticky top-0 z-50">
+    <div class="animate-marquee-track">
+      <div class="flex items-center gap-8 px-6 font-medium tracking-wide">
+        <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-[10px] uppercase font-bold tracking-wider">🔥 Limited Slots</span>
+        <span class="text-white font-semibold">فلیٹ 20% ڈسکاؤنٹ تمام ڈیجیٹل مارکیٹنگ سروسز پر (PKR میں)!</span>
+        <span class="text-slate-500">•</span>
+        <span class="text-amber-300 font-semibold">🎁 Free 30-Minute 1-on-1 Growth & Funnel Audit</span>
+        <span class="text-slate-500">•</span>
+        <span class="text-violet-300 font-semibold">🎮 Play Viral Ad Tycoon Game & Win Extra Discount!</span>
+        <span class="text-slate-500">•</span>
+        <span>🏆 Academic Gold Medalist Leadership (Zubair Jamil)</span>
+        <span class="text-slate-500">•</span>
+      </div>
+      <div class="flex items-center gap-8 px-6 font-medium tracking-wide" aria-hidden="true">
+        <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-[10px] uppercase font-bold tracking-wider">🔥 Limited Slots</span>
+        <span class="text-white font-semibold">فلیٹ 20% ڈسکاؤنٹ تمام ڈیجیٹل مارکیٹنگ سروسز پر (PKR میں)!</span>
+        <span class="text-slate-500">•</span>
+        <span class="text-amber-300 font-semibold">🎁 Free 30-Minute 1-on-1 Growth & Funnel Audit</span>
+        <span class="text-slate-500">•</span>
+        <span class="text-violet-300 font-semibold">🎮 Play Viral Ad Tycoon Game & Win Extra Discount!</span>
+        <span class="text-slate-500">•</span>
+        <span>🏆 Academic Gold Medalist Leadership (Zubair Jamil)</span>
+        <span class="text-slate-500">•</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Header / Navigation Bar -->
+  <header class="sticky top-9 left-0 right-0 z-40 apple-glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="https://i.postimg.cc/5X6rKV8G/fluent-media-marketing-serviecs.png" 
+             alt="Fluent Media Marketing Agency Logo" 
+             class="w-10 h-10 sm:w-11 sm:h-11 object-contain rounded-xl bg-white/5 p-1 border border-white/10 group-hover:scale-105 transition-transform" />
+        <div class="flex flex-col">
+          <span class="text-base sm:text-lg font-extrabold tracking-tight text-white font-display">Fluent<span class="text-indigo-400">Media</span></span>
+          <span class="text-[8px] sm:text-[9px] tracking-widest uppercase text-slate-400 font-semibold">Growth & Performance Agency</span>
+        </div>
+      </a>
+      
+      <nav class="hidden lg:flex items-center gap-6 text-xs font-semibold uppercase tracking-wider text-slate-300">
+        <a href="index.html" class="hover:text-indigo-400 transition-colors">Home</a>
+        <a href="about.html" class="hover:text-indigo-400 transition-colors">Our Story</a>
+        <a href="services.html" class="hover:text-indigo-400 transition-colors">Services</a>
+        <a href="portfolio.html" class="hover:text-indigo-400 transition-colors">Client Work</a>
+        <a href="qr.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><i class="fa-solid fa-qrcode"></i> QR Connect</a>
+        <a href="blog.html" class="text-indigo-400 font-bold border-b border-indigo-400 pb-0.5">Blog</a>
+        <a href="game.html" class="text-emerald-300 hover:text-emerald-200 transition-colors font-bold flex items-center gap-1.5"><i class="fa-solid fa-gamepad"></i> Game Arcade</a>
+        <a href="index.html#packages" class="text-amber-300 hover:text-amber-200 transition-colors font-bold">Pricing (PKR)</a>
+        <a href="contact.html" class="hover:text-indigo-400 transition-colors">Contact</a>
+      </nav>
+
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="tel:03294357248" class="text-xs font-semibold text-slate-300 hover:text-white flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/[0.04] border border-white/[0.08]">
+          <i class="fa-solid fa-phone text-indigo-400 text-xs"></i>
+          <span>0329 4357248</span>
+        </a>
+        <a href="https://wa.me/923294357248?text=Salam%20Zubair!%20I%20am%20reading%20your%20article." target="_blank" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all shadow-md shadow-emerald-900/30 flex items-center gap-1.5">
+          <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
+        </a>
+      </div>
+
+      <button id="menu-btn" type="button" class="lg:hidden text-slate-300 focus:outline-none p-2 rounded-lg bg-white/5 border border-white/10" aria-label="Toggle Navigation Menu">
+        <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+    
+    <div id="mobile-menu" class="hidden lg:hidden px-6 py-6 bg-[#080d1e]/95 backdrop-blur-2xl border-b border-slate-800 space-y-3.5 text-xs font-semibold uppercase tracking-wider">
+      <a href="index.html" class="mobile-link block text-slate-300 hover:text-indigo-400 py-1.5">Home</a>
+      <a href="about.html" class="mobile-link block text-slate-300 hover:text-indigo-400 py-1.5">Our Story & Founder</a>
+      <a href="services.html" class="mobile-link block text-slate-300 hover:text-indigo-400 py-1.5">Full Digital Services</a>
+      <a href="portfolio.html" class="mobile-link block text-slate-300 hover:text-indigo-400 py-1.5">Client Projects & Work</a>
+      <a href="game.html" class="mobile-link block text-emerald-300 font-bold py-1.5 flex items-center gap-2"><i class="fa-solid fa-gamepad"></i> Game Arcade</a>
+      <a href="index.html#packages" class="mobile-link block text-amber-300 font-bold py-1.5">Pricing Packages (PKR)</a>
+      <a href="contact.html" class="mobile-link block text-slate-300 hover:text-indigo-400 py-1.5">Contact & Consultation</a>
+      <div class="pt-4 border-t border-slate-800 flex flex-col gap-2">
+        <a href="https://wa.me/923294357248" target="_blank" class="text-xs text-white bg-emerald-600 py-3 rounded-xl font-bold flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-base"></i> Direct WhatsApp
+        </a>
+    </div>
+  </header>
+
+  <!-- Article Container -->
+  <article class="py-14 sm:py-20 max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+    
+    <!-- Meta Breadcrumbs -->
+    <div class="flex items-center gap-2 text-xs text-slate-400 mb-6">
+      <a href="blog.html" class="hover:text-indigo-400 transition-colors">Blog</a>
+      <span>/</span>
+      <span class="text-indigo-400">Meta Ads Strategy</span>
+    </div>
+
+    <!-- Main Title -->
+    <h1 class="text-3xl sm:text-5xl font-extrabold text-white font-display leading-[1.2] mb-6">
+      How to Scale Meta Ads to 4.7x ROAS in 2026: The Algorithmic Creative Blueprint
+    </h1>
+
+    <!-- Author & Publication Data -->
+    <div class="flex items-center justify-between border-y border-white/[0.08] py-4 mb-10 text-xs text-slate-300">
+      <div class="flex items-center gap-3">
+        <img src="https://files.catbox.moe/mhlqby.jpeg" alt="Zubair Jamil" class="w-10 h-10 rounded-full object-cover border border-indigo-500/40" />
+        <div>
+          <p class="font-bold text-white">Zubair Jamil (Academic Gold Medalist)</p>
+          <p class="text-[10px] text-slate-400">Founder & Head Growth Strategist</p>
+        </div>
+      </div>
+      <div class="text-right">
+        <p class="font-semibold text-slate-300">Updated: August 2026</p>
+        <p class="text-[10px] text-indigo-400">8 Min Read • Performance Lab</p>
+      </div>
+    </div>
+
+    <!-- Article Featured Image -->
+    <div class="rounded-3xl overflow-hidden border border-white/10 mb-12 shadow-2xl">
+      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Scaling Meta Ads Dashboard" class="w-full h-80 sm:h-96 object-cover" />
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="apple-glass-card p-6 rounded-2xl mb-12 border-indigo-500/20">
+      <p class="text-xs font-bold text-white uppercase tracking-wider mb-3 font-display">In This Masterclass:</p>
+      <ul class="space-y-2 text-xs text-indigo-300 font-medium">
+        <li><a href="#section-1" class="hover:text-white transition-colors">1. The Death of Micro-Audience Targeting</a></li>
+        <li><a href="#section-2" class="hover:text-white transition-colors">2. Creative As The New Algorithm Targeting</a></li>
+        <li><a href="#section-3" class="hover:text-white transition-colors">3. The 3-Second Hook Retention Framework</a></li>
+        <li><a href="#section-4" class="hover:text-white transition-colors">4. Bypassing iOS Tracking Loss with Server CAPI</a></li>
+        <li><a href="#section-5" class="hover:text-white transition-colors">5. Dynamic Budget Scaling & ROAS Stability</a></li>
+      </ul>
+    </div>
+
+    <!-- Body Content -->
+    <div class="space-y-8 text-slate-300 text-sm sm:text-base leading-relaxed font-light">
+      
+      <p>
+        If your Meta (Facebook & Instagram) ad campaigns have suffered rising Cost-Per-Clicks (CPCs) and unstable return on ad spend (ROAS) over the last 12 months, you are not alone.
+      </p>
+      <p>
+        Following major algorithmic overhauls and Apple’s iOS privacy restrictions, the old playbooks—stacking 20 narrow interest groups, manual budget splits, and generic single-image product shots—now actively harm your campaign delivery.
+      </p>
+
+      <div id="section-1" class="pt-4">
+        <h2 class="text-2xl font-bold text-white font-display mb-3">1. The Death of Micro-Audience Targeting</h2>
+        <p>
+          Meta's machine learning delivery system (Andromeda) has evolved beyond manual human segmentation. When you restrict Meta to 50,000-person lookalike pockets, the algorithm has to bid aggressively in auction competition, instantly driving up your CPMs (Cost Per Thousand Impressions).
+        </p>
+        <p class="mt-3">
+          At Fluent Media, we transition our e-commerce clients to <strong>Broad Audience Targeting (Advantage+ Audience)</strong>. We give Meta minimum demographic restrictions and let the ad creative do the filtering.
+        </p>
+      </div>
+
+      <!-- Highlight Box iOS 17 Glass -->
+      <div class="apple-glass-card p-6 border-amber-500/30">
+        <div class="flex items-start gap-3">
+          <i class="fa-solid fa-lightbulb text-amber-400 text-lg mt-0.5"></i>
+          <div>
+            <h4 class="text-sm font-bold text-white">Gold Medalist Rule:</h4>
+            <p class="text-xs text-slate-300 mt-1 font-light leading-relaxed">
+              "Your ad copy and video hook are your targeting parameters. If your video speaks specifically to acne-prone skin, only acne sufferers will stop scrolling. The algorithm observes this behavior and delivers your ad to similar high-intent buyers for 40% less cost."
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="section-2" class="pt-4">
+        <h2 class="text-2xl font-bold text-white font-display mb-3">2. Creative As The New Algorithm Targeting</h2>
+        <p>
+          Instead of testing 10 different ad sets with the same video, you should test <strong>1 ad set with 5 fundamentally different creative angles</strong>:
+        </p>
+        <ul class="list-disc pl-6 space-y-2 mt-2 text-xs sm:text-sm text-slate-300">
+          <li><strong>Angle A (The Skeptic / Us vs Them):</strong> Direct comparison against inferior market alternatives.</li>
+          <li><strong>Angle B (Founder Authority):</strong> Behind-the-scenes narrative highlighting craftsmanship or gold standard quality.</li>
+          <li><strong>Angle C (Customer Transformation):</strong> User-Generated Content (UGC) showing immediate before-and-after emotional payoff.</li>
+          <li><strong>Angle D (Product Immersion):</strong> High-definition macro sensory video reels with dynamic kinetic typography.</li>
+        </ul>
+      </div>
+
+      <div id="section-3" class="pt-4">
+        <h2 class="text-2xl font-bold text-white font-display mb-3">3. The 3-Second Hook Retention Framework</h2>
+        <p>
+          On TikTok and Instagram Reels, over 70% of viewers scroll past within the first 1.8 seconds. If your video starts with a slow fade-in logo or a robotic introduction, your budget is burning in vain.
+        </p>
+        <p class="mt-3">
+          Every video produced at Fluent Media incorporates an <strong>Algorithmic Pattern Interrupt</strong>: visual contrast, unexpected text questions, and kinetic caption sound cues within the first 3 frames.
+        </p>
+      </div>
+
+      <div id="section-4" class="pt-4">
+        <h2 class="text-2xl font-bold text-white font-display mb-3">4. Bypassing iOS Tracking Loss with Server CAPI</h2>
+        <p>
+          Relying on standard browser-side pixels in 2026 results in 30% to 45% of customer purchases remaining invisible to Meta. When Meta doesn't know who bought, its optimization algorithms cannot find more buyers.
+        </p>
+        <p class="mt-3">
+          By deploying <strong>Meta Conversions API (CAPI)</strong> via Google Tag Manager Server containers, we route purchase signals directly from your Shopify or custom backend server to Meta. Result: Event Match Quality jumps above 8.5/10 and ROAS stabilizes dramatically.
+        </p>
+      </div>
+
+      <div id="section-5" class="pt-4">
+        <h2 class="text-2xl font-bold text-white font-display mb-3">5. Dynamic Budget Scaling & ROAS Stability</h2>
+        <p>
+          Never scale budgets by more than 20% in a single 24-hour window. Rapid budget spikes reset Meta's learning phase and trigger algorithmic volatility. Use automated rules that increase daily budgets by 15% when ROAS exceeds 3.8x, and down-throttle during low-converting hours.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Author Bio Box -->
+    <div class="apple-glass-card p-6 sm:p-8 rounded-3xl mt-14 mb-16 border-indigo-500/30">
+      <div class="flex flex-col sm:flex-row items-center gap-6">
+        <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 border border-white/10">
+          <img src="https://files.catbox.moe/mhlqby.jpeg" alt="Zubair Jamil" class="w-full h-full object-cover" />
+        </div>
+        <div class="space-y-2 text-center sm:text-left">
+          <div class="flex items-center justify-center sm:justify-start gap-2">
+            <h3 class="text-lg font-bold text-white font-display">Written by Zubair Jamil</h3>
+            <span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 text-[10px] font-bold">Gold Medalist</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed font-light">
+            Founder and Head Growth Strategist at Fluent Media. Certified in algorithmic paid media buying and server-side tracking, with over 140+ verified client projects across Pakistan, USA, and the Middle East.
+          </p>
+          <div class="pt-2 flex flex-wrap gap-3 justify-center sm:justify-start">
+            <a href="https://wa.me/923294357248" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5">
+              <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp (0329 4357248)
+            </a>
+            <a href="mailto:info.zubairansari@gmail.com" class="text-xs font-bold text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5">
+              <i class="fa-solid fa-envelope"></i> info.zubairansari@gmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="apple-glass-interactive p-8 rounded-3xl text-center border border-amber-500/30 shadow-2xl">
+      <h3 class="text-xl sm:text-2xl font-bold text-white font-display mb-2">
+        Want Zubair to Audit Your Current Meta Ad Account?
+      </h3>
+      <p class="text-xs text-slate-300 max-w-md mx-auto mb-6 font-light">
+        Book a free 30-minute Zoom screen-sharing audit. We will identify wasted spend, fix tracking gaps, and map out a 4x+ ROAS strategy.
+      </p>
+      <a href="https://wa.me/923294357248?text=Hello%20Zubair!%20I%20want%20to%20book%20my%20Free%20Meta%20Ads%20Zoom%20Audit." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-amber-400/20">
+        <i class="fa-solid fa-video"></i> Schedule Free 1-on-1 Zoom Audit
+      </a>
+    </div>
+
+  </article>
+
+  <!-- Clean Master Footer -->
+  <footer class="bg-[#02040a] border-t border-white/[0.06] pt-14 sm:pt-16 pb-12 text-slate-400 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 mb-12">
+        <div class="lg:col-span-4 space-y-4">
+          <a href="index.html" class="flex items-center gap-3.5">
+            <img src="https://i.postimg.cc/5X6rKV8G/fluent-media-marketing-serviecs.png" alt="Fluent Media Logo" class="w-9 h-9 object-contain rounded-lg bg-white/5 p-1 border border-white/10" />
+            <span class="text-lg font-extrabold tracking-tight text-white font-display">Fluent<span class="text-indigo-400">Media</span></span>
+          </a>
+          <p class="text-xs text-slate-400 leading-relaxed pr-4 font-light">
+            Founded by certified strategist and Academic Gold Medalist Zubair Jamil. High-impact social media management, algorithmic ad funnels, and turnkey digital growth.
+          </p>
+        </div>
+        <div class="lg:col-span-3 space-y-3">
+          <p class="text-xs font-bold text-white uppercase tracking-wider mb-4 font-display">Pages</p>
+          <ul class="space-y-2 text-xs text-slate-400 font-light">
+            <li><a href="index.html" class="hover:text-indigo-400 transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-indigo-400 transition-colors">About Zubair Jamil</a></li>
+            <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Services</a></li>
+            <li><a href="portfolio.html" class="hover:text-indigo-400 transition-colors">Portfolio</a></li>
+            <li><a href="blog.html" class="text-indigo-400 font-bold">Blog</a></li>
+            <li><a href="contact.html" class="hover:text-indigo-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-5 space-y-3">
+          <p class="text-xs font-bold text-white uppercase tracking-wider mb-4 font-display">Direct Contact</p>
+          <ul class="space-y-2.5 text-xs text-slate-400 font-light">
+            <li><i class="fa-brands fa-whatsapp text-emerald-400 mr-2"></i> WhatsApp: 0329 4357248 (+92 329 4357248)</li>
+            <li><i class="fa-solid fa-envelope text-indigo-400 mr-2"></i> Email: info.zubairansari@gmail.com</li>
+            <li><i class="fa-solid fa-location-dot text-indigo-400 mr-2"></i> Lahore, Punjab, Pakistan (Global Services)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-white/[0.06] text-center text-xs text-slate-500">
+        &copy; 2026 Fluent Media. All rights reserved. Founded by Zubair Jamil.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Floating iOS 17 Bottom Action Dock -->
+  <div class="mobile-action-dock sm:hidden">
+    <a href="tel:03294357248" class="mobile-dock-btn">
+      <i class="fa-solid fa-phone text-indigo-400"></i>
+      <span>Call</span>
+    </a>
+    <a href="https://wa.me/923294357248" target="_blank" class="mobile-dock-btn">
+      <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+      <span>WhatsApp</span>
+    </a>
+    <a href="game.html" class="mobile-dock-btn">
+      <i class="fa-solid fa-gamepad text-violet-400"></i>
+      <span>Play Game</span>
+    </a>
+    <a href="index.html#packages" class="mobile-dock-btn">
+      <i class="fa-solid fa-tag text-amber-400"></i>
+      <span>PKR Plans</span>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/three-bg.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/chatbot.js"></script>
+</body>
+</html>

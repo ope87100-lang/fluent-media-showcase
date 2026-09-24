@@ -1,0 +1,349 @@
+/* ==========================================================================
+   FLUENT MEDIA | DESIGN SYSTEM & iOS 17 FROSTED GLASS STYLES
+   Founder: Zubair Jamil (Academic Gold Medalist)
+   ========================================================================== */
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #030610;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4f46e5;
+}
+
+/* Hide Scrollbar helper */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Base Body Smoothing */
+body {
+  background-color: #030610;
+  color: #f1f5f9;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* 3D WebGL Canvas Layer */
+#three-bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+  z-index: 0;
+}
+
+/* ==========================================================================
+   iOS 17 FROSTED GLASS & BLUR BOXES (Vibrant Apple Blur)
+   ========================================================================== */
+
+/* Standard Glass Header / Bar */
+.apple-glass-nav {
+  background: rgba(8, 12, 24, 0.82);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* iOS 17 Blur Box Cards */
+.apple-glass-card {
+  background: rgba(15, 22, 41, 0.65);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease,
+              background 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.apple-glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  pointer-events: none;
+}
+
+.apple-glass-card:hover {
+  background: rgba(22, 31, 56, 0.85);
+  border-color: rgba(99, 102, 241, 0.45);
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.25);
+}
+
+/* High Interactive Glass / Form Box */
+.apple-glass-interactive {
+  background: rgba(12, 17, 32, 0.85);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+/* iOS 17 Blur Pill */
+.apple-glass-pill {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.25s ease;
+}
+.apple-glass-pill:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+/* 3D Tilt Card Perspective */
+.tilt-card-wrap {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+.tilt-card {
+  transition: transform 0.2s cubic-bezier(0.1, 0.8, 0.3, 1), box-shadow 0.2s ease;
+  transform-style: preserve-3d;
+}
+
+/* Founder Portrait Aspect Frame */
+.founder-img-container {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  position: relative;
+}
+.founder-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.founder-img-container:hover img {
+  transform: scale(1.04);
+}
+
+/* Dynamic Gradient Text */
+.gradient-text-glow {
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gradient-indigo-violet {
+  background: linear-gradient(135deg, #a5b4fc 0%, #c084fc 50%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ==========================================================================
+   ANIMATIONS & EFFECTS
+   ========================================================================== */
+
+@keyframes marqueeMedium {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeMedium 40s linear infinite;
+}
+.animate-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes pulseWhatsApp {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px rgba(16, 185, 129, 0.75);
+  }
+}
+.whatsapp-glow {
+  animation: pulseWhatsApp 3s infinite ease-in-out;
+}
+
+@keyframes floatElement {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float {
+  animation: floatElement 5s ease-in-out infinite;
+}
+
+/* AI Chatbot Widget Styling */
+#chatbot-modal {
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.3s;
+}
+#chatbot-modal.closed {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.95);
+  pointer-events: none;
+}
+#chatbot-modal.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.chat-bubble-bot {
+  background: rgba(27, 38, 68, 0.85);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.chat-bubble-user {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Lightbox Modal */
+#lightbox-modal {
+  transition: opacity 0.25s ease;
+}
+#lightbox-modal.hidden {
+  display: none;
+  opacity: 0;
+}
+
+/* Mobile Responsiveness Tweaks */
+@media (max-width: 640px) {
+  .apple-glass-card {
+    border-radius: 1.25rem;
+  }
+  .hero-heading {
+    font-size: 2.25rem !important;
+    line-height: 1.2 !important;
+  }
+}
+
+/* ==========================================================================
+   SCROLL PROGRESS BAR & READING METRIC
+   ========================================================================== */
+#scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #4f46e5, #8b5cf6, #ec4899, #f59e0b);
+  z-index: 9999;
+  transition: width 0.1s ease-out;
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.8);
+}
+
+/* ==========================================================================
+   ARCADE GAME CONSOLE & LIVE PKR CALCULATOR
+   ========================================================================== */
+.game-console-box {
+  background: radial-gradient(circle at 50% 0%, rgba(30, 42, 74, 0.75) 0%, rgba(7, 11, 24, 0.95) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.28);
+  box-shadow: 0 24px 64px -16px rgba(0, 0, 0, 0.85), inset 0 1px 1px rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+#tycoon-canvas {
+  touch-action: none;
+  background: radial-gradient(circle at center, #0c1228 0%, #030611 100%);
+  border-radius: 1.25rem;
+  cursor: crosshair;
+}
+
+/* Neon Glow Pulse */
+.neon-glow-indigo {
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.35);
+}
+
+.neon-glow-emerald {
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.35);
+}
+
+/* ==========================================================================
+   MOBILE FLOATING iOS 17 BOTTOM ACTION DOCK
+   ========================================================================== */
+.mobile-action-dock {
+  position: fixed;
+  bottom: 0.85rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 45;
+  width: calc(100% - 1.75rem);
+  max-width: 420px;
+  background: rgba(10, 16, 32, 0.88);
+  backdrop-filter: blur(26px);
+  -webkit-backdrop-filter: blur(26px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 9999px;
+  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.7), 0 0 20px rgba(99, 102, 241, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.5rem 0.75rem;
+}
+
+.mobile-dock-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #94a3b8;
+  transition: all 0.2s ease;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.mobile-dock-btn:active,
+.mobile-dock-btn.active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  transform: scale(0.96);
+}
+
+.mobile-dock-btn i {
+  font-size: 15px;
+}
+
+/* PKR Badge */
+.pkr-currency-badge {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(168, 85, 247, 0.15));
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  color: #c084fc;
+}
+
