@@ -492,14 +492,31 @@
     }
 
     @media (max-width: 480px) {
+      .dock-fixed-bottom {
+        bottom: 12px !important;
+      }
       .dock-pill-bar {
-        gap: 6px;
-        padding: 4px;
+        gap: 2px !important;
+        padding: 3px 4px !important;
+        border-radius: 9999px !important;
+        box-shadow: 0 10px 28px -4px rgba(0, 0, 0, 0.85), inset 0 1px 1px rgba(255, 255, 255, 0.2) !important;
+      }
+      .dock-glider {
+        top: 3px !important;
+        bottom: 3px !important;
       }
       .dock-item-btn {
-        padding: 8px 14px;
-        min-width: 52px;
-        height: 44px;
+        padding: 6px 8px !important;
+        min-width: 40px !important;
+        height: 36px !important;
+        border-radius: 9999px !important;
+      }
+      .dock-item-btn svg {
+        width: 18px !important;
+        height: 18px !important;
+      }
+      .dock-ambient-glow {
+        inset: -6px -10px !important;
       }
     }
 
@@ -699,21 +716,7 @@
   <div class="ambient-glow-2"></div>
   <div class="ambient-glow-3"></div>
 
-  <!-- Top Announcement Bar (Glass Frosted Header - Desktop / Tablet) -->
-  <div class="hidden sm:block relative z-30 bg-black/40 backdrop-blur-md border-b border-white/10 py-2.5 px-4 text-center text-xs font-mono tracking-wider uppercase text-slate-300">
-    <div class="max-w-5xl mx-auto flex items-center justify-between flex-wrap gap-2">
-      <span class="flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block animate-pulse"></span>
-        <span class="font-bold text-white">FLUENT MEDIA MARKETING</span> &bull; <span>FOUNDED BY ACADEMIC GOLD MEDALIST</span>
-      </span>
-      <span class="hidden md:inline text-slate-400">
-        QR QUICK ACCESS HUB &bull; <strong class="text-white">TAP ANY LINK TO CONNECT</strong>
-      </span>
-      <a href="tel:03294357248" class="text-emerald-400 hover:text-emerald-300 hover:underline font-bold flex items-center gap-1">
-        <i class="fa-solid fa-phone text-[10px]"></i> Direct Call Now
-      </a>
-    </div>
-  </div>
+
 
   <!-- Main Navigation Header (Frosted Glass - Clean Single-Line on Mobile) -->
   <header class="relative z-30 border-b border-white/10 bg-[#060a11]/90 backdrop-blur-xl sticky top-0">
@@ -761,7 +764,46 @@
   <main class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-4 pb-36 sm:pt-8 sm:pb-28 space-y-10 sm:space-y-16 flex-grow">
 
     <!-- 1. HERO BIO PROFILE HUB (EXACT MATCH TO IMAGE 4 - MAYA JOHNSON / LINKTREE STYLE) -->
-    <section class="reveal max-w-xl mx-auto text-center space-y-5 pt-2">
+    <section class="reveal max-w-xl mx-auto text-center space-y-6 pt-2">
+
+      <!-- Agency Main Headline & Explanatory Value Proposition (Prominent First View Before Profile) -->
+      <div class="space-y-3.5 pb-2 text-center">
+        <!-- Agency Badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block animate-pulse"></span>
+          <span>FLUENT MEDIA MARKETING &bull; STRATEGY &amp; PORTFOLIO HUB</span>
+        </div>
+
+        <!-- Main Agency Headline -->
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white font-display tracking-tight leading-tight px-1">
+          Scaling Brands &amp; Businesses With <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">High-ROAS Systems</span>
+        </h1>
+
+        <!-- Explanatory Intro Paragraph: Clearly stating what this portfolio is & how we help clients -->
+        <p class="text-xs sm:text-sm text-slate-300 font-light max-w-lg mx-auto leading-relaxed px-2">
+          Explore our client portfolio, verified campaign metrics, and direct strategy channels. We partner with business owners to stop wasted ad spend and engineer predictable revenue through high-converting Meta &amp; TikTok ads, viral short-form reels, and automated scaling funnels.
+        </p>
+
+        <!-- Quick 3-Pillar Advantage Chips -->
+        <div class="flex items-center justify-center flex-wrap gap-2 pt-1 text-[11px] font-mono text-slate-300">
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 border border-white/10 flex items-center gap-1.5">
+            <i class="fa-solid fa-chart-line text-emerald-400"></i> High-ROAS Meta Ads
+          </span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 border border-white/10 flex items-center gap-1.5">
+            <i class="fa-solid fa-video text-cyan-400"></i> Viral Reels Production
+          </span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 border border-white/10 flex items-center gap-1.5">
+            <i class="fa-solid fa-bullseye text-amber-400"></i> Scalable Sales Funnels
+          </span>
+        </div>
+
+        <!-- Subtle Leadership Section Divider -->
+        <div class="pt-3 pb-1 flex items-center justify-center gap-3">
+          <div class="h-px w-16 bg-gradient-to-r from-transparent to-white/20"></div>
+          <span class="text-[10px] font-mono uppercase tracking-widest text-slate-400 font-semibold">Founder &amp; Executive Leadership</span>
+          <div class="h-px w-16 bg-gradient-to-l from-transparent to-white/20"></div>
+        </div>
+      </div>
       
       <!-- Glowing Circular Avatar -->
       <div class="flex justify-center">
@@ -775,10 +817,10 @@
       <!-- Founder Name & Verified Badge -->
       <div class="space-y-1">
         <div class="flex items-center justify-center gap-2">
-          <h1 class="text-2xl sm:text-3xl font-extrabold text-white font-display">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-display">
             Zubair Jamil
-          </h1>
-          <span class="w-6 h-6 rounded-full bg-sky-500 text-white flex items-center justify-center text-xs shadow-sm">
+          </h2>
+          <span class="w-6 h-6 rounded-full bg-sky-500 text-white flex items-center justify-center text-xs shadow-sm" title="Verified Founder">
             <i class="fa-solid fa-check"></i>
           </span>
         </div>
@@ -786,7 +828,7 @@
           Founder & Head Growth Strategist &bull; Academic Gold Medalist
         </p>
         <p class="text-xs sm:text-sm text-slate-300 font-light max-w-md mx-auto pt-1 leading-relaxed">
-          Helping serious business owners & brands scale profitably with high-ROAS Meta Ads, viral reels & predictable sales funnels.
+          Directly consulting and architecting high-ROAS marketing funnels to scale businesses profitably.
         </p>
       </div>
 
@@ -1551,7 +1593,7 @@
   </footer>
 
   <!-- FLOATING FROSTED GLASS DOCK (EXACT 1:1 MATCH TO USER SCREENSHOT) -->
-  <div class="fixed bottom-6 inset-x-0 z-50 flex justify-center px-4 pointer-events-none">
+  <div class="fixed bottom-6 dock-fixed-bottom inset-x-0 z-50 flex justify-center px-4 pointer-events-none">
     <div class="dock-pill-wrapper pointer-events-auto">
       <!-- Ambient Cyan Atmospheric Glow behind dock (Matches reference screenshot) -->
       <div class="dock-ambient-glow"></div>
