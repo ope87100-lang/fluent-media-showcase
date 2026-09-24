@@ -143,23 +143,25 @@
 
     /* ============================================================
     /* ============================================================
-       APOLLO 11 FROSTED GLASS CARDS (EXACT MATCH TO media_1790269827206.jpg)
+       APOLLO 11 FROSTED GLASS CARDS (PERFECT MOBILE & DESKTOP FIT)
        ============================================================ */
     .apollo-card {
       position: relative;
-      border-radius: 28px;
+      width: 100%;
+      border-radius: 24px;
       overflow: hidden;
       background: #06090e;
       border: 1px solid rgba(255, 255, 255, 0.12);
-      box-shadow: 0 20px 48px -10px rgba(0, 0, 0, 0.75), inset 0 1px 1.5px rgba(255, 255, 255, 0.15);
+      box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.75), inset 0 1px 1.5px rgba(255, 255, 255, 0.15);
       transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
-      min-height: 290px;
+      min-height: 380px;
     }
 
     @media (min-width: 640px) {
       .apollo-card {
-        min-height: 310px;
+        min-height: 320px;
         border-radius: 32px;
+        box-shadow: 0 20px 48px -10px rgba(0, 0, 0, 0.75), inset 0 1px 1.5px rgba(255, 255, 255, 0.15);
       }
     }
 
@@ -169,9 +171,9 @@
       border-color: rgba(255, 255, 255, 0.28);
     }
 
-    /* Top Brand & Meta Header inside Card (Optional, clean and transparent with ZERO dark vintage cuts) */
+    /* Top Brand & Meta Header inside Card (Clean and transparent with ZERO dark vintage cuts) */
     .apollo-card-header {
-      display: none; /* Removed completely to eliminate vintage top cut, heart/dot clutter and preserve clean edge-to-edge photo */
+      display: none;
     }
 
     /* The Cinematic Card Background Image */
@@ -181,7 +183,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 30%;
+      object-position: center 25%;
       transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
     }
 
@@ -189,21 +191,24 @@
       transform: scale(1.05);
     }
 
-    /* CINEMATIC FROSTED GLASS SHELF (EXACT 50/50 SPLIT ACROSS ALL CARDS) */
+    /* CINEMATIC FROSTED GLASS SHELF (100% FULL-WIDTH COVERAGE ON MOBILE & DESKTOP) */
     .apollo-glass-shelf {
       position: absolute;
       bottom: 0;
-      inset-x: 0;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
       z-index: 10;
       min-height: 52%;
-      padding: 36px 20px 20px 20px;
+      padding: 24px 18px 20px 18px;
       
-      /* Pure translucent frosted glass shelf with subtle hairline edge and diffused backdrop blur */
+      /* Pure translucent frosted glass shelf covering 100% width with subtle top hairline edge */
       background: linear-gradient(to top, 
-        rgba(6, 9, 15, 0.95) 0%, 
-        rgba(6, 9, 15, 0.82) 48%, 
-        rgba(6, 9, 15, 0.45) 78%, 
-        rgba(6, 9, 15, 0.12) 95%, 
+        rgba(6, 10, 17, 0.98) 0%, 
+        rgba(6, 10, 17, 0.92) 50%, 
+        rgba(6, 10, 17, 0.65) 80%, 
+        rgba(6, 10, 17, 0.20) 95%, 
         transparent 100%
       );
       backdrop-filter: blur(24px) saturate(180%);
@@ -221,16 +226,17 @@
         flex-direction: row;
         align-items: flex-end;
         justify-content: space-between;
-        padding: 44px 28px 22px 28px;
+        padding: 38px 28px 22px 28px;
         min-height: 50%;
+        gap: 16px;
       }
     }
 
     .apollo-title {
       font-family: 'Space Grotesk', -apple-system, sans-serif;
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 700;
-      line-height: 1.2;
+      line-height: 1.25;
       color: #ffffff;
       letter-spacing: -0.02em;
       text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
@@ -238,13 +244,13 @@
 
     @media (min-width: 640px) {
       .apollo-title {
-        font-size: 26px;
+        font-size: 25px;
       }
     }
 
     .apollo-subtitle {
       font-size: 12px;
-      line-height: 1.5;
+      line-height: 1.45;
       color: rgba(226, 232, 240, 0.9);
       font-weight: 400;
       max-width: 380px;
@@ -254,24 +260,25 @@
     @media (min-width: 640px) {
       .apollo-subtitle {
         font-size: 13px;
+        line-height: 1.5;
       }
     }
 
-    /* Pill Action Button on Bottom Right (Exact Match to Apollo 11 "Learn more") */
+    /* Pill Action Button (Clean, Sleek Apple Style) */
     .apollo-contact-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 10px 22px;
+      padding: 10px 20px;
       border-radius: 9999px;
-      background: rgba(35, 43, 58, 0.92);
+      background: rgba(30, 41, 59, 0.90);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       border: 1px solid rgba(255, 255, 255, 0.22);
       color: #ffffff !important;
       font-weight: 600;
-      font-size: 13px;
+      font-size: 12px;
       letter-spacing: 0.02em;
       white-space: nowrap;
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.25);
@@ -279,6 +286,14 @@
       flex-shrink: 0;
       cursor: pointer;
       text-decoration: none;
+      width: fit-content;
+    }
+
+    @media (min-width: 640px) {
+      .apollo-contact-btn {
+        padding: 10px 22px;
+        font-size: 13px;
+      }
     }
 
     .apollo-contact-btn:hover {
@@ -382,6 +397,14 @@
 
     .switch-tab-btn:not(.active):hover {
       color: #f1f5f9;
+    }
+
+    @media (max-width: 480px) {
+      .switch-tab-btn {
+        padding: 7px 12px;
+        font-size: 11px;
+        gap: 5px;
+      }
     }
 
     /* FLOATING BOTTOM DOCK - CLEAN APPLE VISIONOS GLASS */
@@ -676,14 +699,14 @@
   <div class="ambient-glow-2"></div>
   <div class="ambient-glow-3"></div>
 
-  <!-- Top Announcement Bar (Glass Frosted Header) -->
-  <div class="relative z-30 bg-black/40 backdrop-blur-md border-b border-white/10 py-2.5 px-4 text-center text-[11px] sm:text-xs font-mono tracking-wider uppercase text-slate-300">
+  <!-- Top Announcement Bar (Glass Frosted Header - Desktop / Tablet) -->
+  <div class="hidden sm:block relative z-30 bg-black/40 backdrop-blur-md border-b border-white/10 py-2.5 px-4 text-center text-xs font-mono tracking-wider uppercase text-slate-300">
     <div class="max-w-5xl mx-auto flex items-center justify-between flex-wrap gap-2">
       <span class="flex items-center gap-2">
         <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block animate-pulse"></span>
         <span class="font-bold text-white">FLUENT MEDIA MARKETING</span> &bull; <span>FOUNDED BY ACADEMIC GOLD MEDALIST</span>
       </span>
-      <span class="hidden sm:inline text-slate-400">
+      <span class="hidden md:inline text-slate-400">
         QR QUICK ACCESS HUB &bull; <strong class="text-white">TAP ANY LINK TO CONNECT</strong>
       </span>
       <a href="tel:03294357248" class="text-emerald-400 hover:text-emerald-300 hover:underline font-bold flex items-center gap-1">
@@ -692,18 +715,18 @@
     </div>
   </div>
 
-  <!-- Main Navigation Header (Frosted Glass) -->
-  <header class="relative z-30 border-b border-white/10 bg-[#060a11]/80 backdrop-blur-xl sticky top-0">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 h-18 sm:h-20 flex items-center justify-between">
+  <!-- Main Navigation Header (Frosted Glass - Clean Single-Line on Mobile) -->
+  <header class="relative z-30 border-b border-white/10 bg-[#060a11]/90 backdrop-blur-xl sticky top-0">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
       
       <!-- Brand Logo & Name -->
-      <a href="https://fluent-media-marketing-bg11.vercel.app/" class="flex items-center gap-3 group">
-        <img src="https://i.postimg.cc/5X6rKV8G/fluent-media-marketing-serviecs.png" alt="Fluent Media Logo" class="w-10 h-10 object-contain rounded-xl p-1 bg-white/5 border border-white/15 shadow-sm" />
+      <a href="https://fluent-media-marketing-bg11.vercel.app/" class="flex items-center gap-2.5 sm:gap-3 group">
+        <img src="https://i.postimg.cc/5X6rKV8G/fluent-media-marketing-serviecs.png" alt="Fluent Media Logo" class="w-8 h-8 sm:w-10 sm:h-10 object-contain rounded-xl p-0.5 sm:p-1 bg-white/5 border border-white/15 shadow-sm" />
         <div class="flex flex-col">
-          <span class="text-base sm:text-lg font-extrabold text-white font-display tracking-tight group-hover:text-emerald-400 transition-colors">
+          <span class="text-sm sm:text-lg font-extrabold text-white font-display tracking-tight group-hover:text-emerald-400 transition-colors">
             FLUENT MEDIA
           </span>
-          <span class="text-[9px] uppercase tracking-widest text-slate-400 font-mono">
+          <span class="hidden sm:inline text-[9px] uppercase tracking-widest text-slate-400 font-mono">
             Strategic Growth & Performance
           </span>
         </div>
@@ -712,7 +735,7 @@
       <!-- Quick Action Buttons & Ambient Music Audio Toggle -->
       <div class="flex items-center gap-2 sm:gap-3">
         <!-- Ambient Music Toggle (Web Audio API Synthesizer) -->
-        <button id="ambientAudioBtn" onclick="toggleAmbientMusic()" class="flex items-center gap-1.5 px-2.5 sm:px-3 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700/90 border border-white/15 text-xs font-mono text-emerald-400 transition-all cursor-pointer shadow-sm" title="Toggle Calming Ambient Music">
+        <button id="ambientAudioBtn" onclick="toggleAmbientMusic()" class="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700/90 border border-white/15 text-xs font-mono text-emerald-400 transition-all cursor-pointer shadow-sm" title="Toggle Calming Ambient Music">
           <i id="audioIcon" class="fa-solid fa-music text-xs text-slate-300"></i>
           <span id="audioStatusText" class="hidden sm:inline text-[11px] text-slate-300">Ambient Music</span>
           <span id="audioWaves" class="hidden items-center gap-0.5">
@@ -722,11 +745,11 @@
           </span>
         </button>
 
-        <a href="tel:03294357248" class="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-amber-500/10 border border-amber-500/30 text-xs font-mono text-amber-300 hover:bg-amber-500/20 transition-all font-bold">
+        <a href="tel:03294357248" class="hidden md:flex items-center gap-1.5 px-3 py-2 rounded-xl bg-amber-500/10 border border-amber-500/30 text-xs font-mono text-amber-300 hover:bg-amber-500/20 transition-all font-bold">
           <i class="fa-solid fa-phone text-amber-400 text-xs"></i>
-          <span class="hidden sm:inline">Call:</span> <span>0329 4357248</span>
+          <span>0329 4357248</span>
         </a>
-        <a href="https://wa.me/923294357248?text=Salam%20Zubair!%20Maine%20aapka%20QR%20code%20scan%20kiya%20hai." target="_blank" class="px-3.5 sm:px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold font-mono tracking-wider transition-all flex items-center gap-2 shadow-lg shadow-emerald-950">
+        <a href="https://wa.me/923294357248?text=Salam%20Zubair!%20Maine%20aapka%20QR%20code%20scan%20kiya%20hai." target="_blank" class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold font-mono tracking-wider transition-all flex items-center gap-1.5 sm:gap-2 shadow-lg shadow-emerald-950">
           <i class="fa-brands fa-whatsapp text-sm"></i> <span class="hidden sm:inline">WhatsApp</span>
         </a>
       </div>
@@ -734,8 +757,8 @@
     </div>
   </header>
 
-  <!-- Main Content Container -->
-  <main class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-12 sm:space-y-16 flex-grow">
+  <!-- Main Content Container with Generous Mobile Bottom Padding (Prevents Dock Overlap) -->
+  <main class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-4 pb-36 sm:pt-8 sm:pb-28 space-y-10 sm:space-y-16 flex-grow">
 
     <!-- 1. HERO BIO PROFILE HUB (EXACT MATCH TO IMAGE 4 - MAYA JOHNSON / LINKTREE STYLE) -->
     <section class="reveal max-w-xl mx-auto text-center space-y-5 pt-2">
@@ -789,7 +812,7 @@
       <!-- ============================================================
            APOLLO FROSTED GLASS CONTACT CARDS (CLEAN 50/50 SPLIT, ZERO TOP BLACK CUT)
            ============================================================ -->
-      <div class="space-y-4 pt-3 text-left">
+      <div class="space-y-6 sm:space-y-8 pt-3 text-left">
 
         <!-- CARD 1: ZUBAIR JAMIL FOUNDER STRATEGY DESK -->
         <div class="apollo-card group">
