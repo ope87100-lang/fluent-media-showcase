@@ -9,8 +9,10 @@
     gtag('js', new Date());
     gtag('config', 'G-RV52LHRRK8');
   </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no, viewport-fit=cover" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   
   <title>Zubair Jamil &bull; Fluent Media Marketing | Growth Hub</title>
   <meta name="description" content="Zubair Jamil (Academic Gold Medalist) - Founder Fluent Media Marketing. Performance marketing, Meta Ads, Video Reels & Social Media Management." />
@@ -46,11 +48,25 @@
     ::-webkit-scrollbar-thumb:hover { background: #334155; }
 
     /* Ultra-Luxe Glassmorphism & Atmospheric Blur Canvas */
+    html {
+      touch-action: pan-y;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+    }
+
     body {
       background-color: #060a11;
       color: #f8fafc;
       overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
       position: relative;
+      touch-action: pan-y;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
     }
 
     /* Ambient Background Glow Spheres */
@@ -491,15 +507,20 @@
       cursor: pointer;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 768px) {
       .dock-fixed-bottom {
         bottom: 12px !important;
       }
       .dock-pill-bar {
-        gap: 2px !important;
-        padding: 3px 4px !important;
+        gap: 3px !important;
+        padding: 3px 5px !important;
         border-radius: 9999px !important;
+        background: rgba(10, 14, 22, 0.94) !important;
+        backdrop-filter: blur(28px) saturate(180%) !important;
+        -webkit-backdrop-filter: blur(28px) saturate(180%) !important;
+        border: 1px solid rgba(255, 255, 255, 0.22) !important;
         box-shadow: 0 10px 28px -4px rgba(0, 0, 0, 0.85), inset 0 1px 1px rgba(255, 255, 255, 0.2) !important;
+        max-width: 210px !important;
       }
       .dock-glider {
         top: 3px !important;
@@ -507,16 +528,17 @@
       }
       .dock-item-btn {
         padding: 6px 8px !important;
-        min-width: 40px !important;
+        min-width: 38px !important;
+        width: 38px !important;
         height: 36px !important;
         border-radius: 9999px !important;
       }
       .dock-item-btn svg {
-        width: 18px !important;
-        height: 18px !important;
+        width: 17px !important;
+        height: 17px !important;
       }
       .dock-ambient-glow {
-        inset: -6px -10px !important;
+        inset: -4px -8px !important;
       }
     }
 
@@ -766,43 +788,61 @@
     <!-- 1. HERO BIO PROFILE HUB (EXACT MATCH TO IMAGE 4 - MAYA JOHNSON / LINKTREE STYLE) -->
     <section class="reveal max-w-xl mx-auto text-center space-y-6 pt-2">
 
-      <!-- Agency Main Headline & Explanatory Value Proposition (Prominent First View Before Profile) -->
-      <div class="space-y-3.5 pb-2 text-center">
-        <!-- Agency Badge -->
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider shadow-sm">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block animate-pulse"></span>
-          <span>FLUENT MEDIA MARKETING &bull; STRATEGY &amp; PORTFOLIO HUB</span>
+      <!-- ============================================================
+           OFFICIAL AGENCY HERO SHOWCASE BANNER (UNMISTAKABLE HERO BANNER)
+           ============================================================ -->
+      <div class="relative overflow-hidden rounded-2xl sm:rounded-3xl p-5 sm:p-7 text-center bg-gradient-to-b from-slate-900/95 via-[#0c1424]/95 to-[#060a11]/98 border-2 border-emerald-500/35 shadow-2xl shadow-emerald-950/50">
+        <!-- Banner Ambient Glow Gradients -->
+        <div class="absolute -top-10 -left-10 w-36 h-36 bg-emerald-500/20 rounded-full blur-2xl pointer-events-none"></div>
+        <div class="absolute -bottom-10 -right-10 w-36 h-36 bg-cyan-500/20 rounded-full blur-2xl pointer-events-none"></div>
+
+        <div class="relative z-10 space-y-3.5">
+          <!-- Agency Live Status Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-400/40 text-emerald-300 text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider shadow-inner">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block animate-pulse shadow-[0_0_8px_#10b981]"></span>
+            <span>FLUENT MEDIA MARKETING &bull; STRATEGY &amp; PORTFOLIO HUB</span>
+          </div>
+
+          <!-- Main Hero Banner Headline -->
+          <h1 class="text-2xl sm:text-3xl md:text-4xl font-black text-white font-display tracking-tight leading-tight px-1">
+            Scaling Brands &amp; Businesses With <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">High-ROAS Systems</span>
+          </h1>
+
+          <!-- Explanatory Intro Paragraph -->
+          <p class="text-xs sm:text-sm text-slate-300 font-normal max-w-lg mx-auto leading-relaxed px-1">
+            Welcome to Fluent Media's official client showcase. We partner with business owners and ambitious brands to eliminate wasted ad spend and generate predictable revenue through high-converting Meta &amp; TikTok ads, viral short-form reels, and automated scaling funnels.
+          </p>
+
+          <!-- 3 Pillars Feature Badges -->
+          <div class="flex items-center justify-center flex-wrap gap-2 pt-1 text-[11px] sm:text-xs font-mono">
+            <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 border border-emerald-500/25 text-emerald-300 flex items-center gap-1.5 shadow-sm">
+              <i class="fa-solid fa-chart-line text-emerald-400"></i> High-ROAS Meta Ads
+            </span>
+            <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 border border-cyan-500/25 text-cyan-300 flex items-center gap-1.5 shadow-sm">
+              <i class="fa-solid fa-video text-cyan-400"></i> Viral Reels Production
+            </span>
+            <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 border border-amber-500/25 text-amber-300 flex items-center gap-1.5 shadow-sm">
+              <i class="fa-solid fa-bullseye text-amber-400"></i> Scalable Sales Funnels
+            </span>
+          </div>
+
+          <!-- Direct Quick Action Buttons inside Banner -->
+          <div class="pt-2 flex items-center justify-center gap-2.5 flex-wrap">
+            <a href="#portfolio" class="px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold font-mono tracking-wider transition-all flex items-center gap-1.5 shadow-md shadow-emerald-950">
+              <i class="fa-solid fa-briefcase"></i> View Client Work
+            </a>
+            <a href="#audit" class="px-3.5 py-1.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 border border-white/20 text-slate-200 text-xs font-bold font-mono tracking-wider transition-all flex items-center gap-1.5">
+              <i class="fa-solid fa-calendar-check text-emerald-400"></i> Free 30-Min Audit
+            </a>
+          </div>
         </div>
+      </div>
 
-        <!-- Main Agency Headline -->
-        <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white font-display tracking-tight leading-tight px-1">
-          Scaling Brands &amp; Businesses With <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">High-ROAS Systems</span>
-        </h1>
-
-        <!-- Explanatory Intro Paragraph: Clearly stating what this portfolio is & how we help clients -->
-        <p class="text-xs sm:text-sm text-slate-300 font-light max-w-lg mx-auto leading-relaxed px-2">
-          Explore our client portfolio, verified campaign metrics, and direct strategy channels. We partner with business owners to stop wasted ad spend and engineer predictable revenue through high-converting Meta &amp; TikTok ads, viral short-form reels, and automated scaling funnels.
-        </p>
-
-        <!-- Quick 3-Pillar Advantage Chips -->
-        <div class="flex items-center justify-center flex-wrap gap-2 pt-1 text-[11px] font-mono text-slate-300">
-          <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 border border-white/10 flex items-center gap-1.5">
-            <i class="fa-solid fa-chart-line text-emerald-400"></i> High-ROAS Meta Ads
-          </span>
-          <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 border border-white/10 flex items-center gap-1.5">
-            <i class="fa-solid fa-video text-cyan-400"></i> Viral Reels Production
-          </span>
-          <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 border border-white/10 flex items-center gap-1.5">
-            <i class="fa-solid fa-bullseye text-amber-400"></i> Scalable Sales Funnels
-          </span>
-        </div>
-
-        <!-- Subtle Leadership Section Divider -->
-        <div class="pt-3 pb-1 flex items-center justify-center gap-3">
-          <div class="h-px w-16 bg-gradient-to-r from-transparent to-white/20"></div>
-          <span class="text-[10px] font-mono uppercase tracking-widest text-slate-400 font-semibold">Founder &amp; Executive Leadership</span>
-          <div class="h-px w-16 bg-gradient-to-l from-transparent to-white/20"></div>
-        </div>
+      <!-- Subtle Leadership Section Divider -->
+      <div class="pt-2 pb-1 flex items-center justify-center gap-3">
+        <div class="h-px w-16 bg-gradient-to-r from-transparent to-white/20"></div>
+        <span class="text-[10px] font-mono uppercase tracking-widest text-slate-400 font-semibold">Founder &amp; Executive Leadership</span>
+        <div class="h-px w-16 bg-gradient-to-l from-transparent to-white/20"></div>
       </div>
       
       <!-- Glowing Circular Avatar -->
@@ -1863,6 +1903,24 @@
       });
 
       reveals.forEach(el => observer.observe(el));
+
+      // 7. STRICT MOBILE ZOOM PREVENTION (Locks page scale & prevents pinch/double-tap zoom)
+      document.addEventListener('gesturestart', function (e) {
+        e.preventDefault();
+      });
+      document.addEventListener('touchmove', function (e) {
+        if (e.scale && e.scale !== 1) {
+          e.preventDefault();
+        }
+      }, { passive: false });
+      let lastTouchEnd = 0;
+      document.addEventListener('touchend', function (e) {
+        const now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+          e.preventDefault();
+        }
+        lastTouchEnd = now;
+      }, false);
     });
 
     // 6. AMBIENT MUSIC EXPERIENCE SYNTHESIZER (Pure Web Audio API - Zero 404s, Zero Lag)
