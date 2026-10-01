@@ -56,25 +56,33 @@
       touch-action: pan-y;
       -webkit-text-size-adjust: 100%;
       text-size-adjust: 100%;
-      overflow-x: hidden;
+      overflow-x: hidden !important;
       width: 100%;
-      max-width: 100%;
+      max-width: 100vw;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
       background-color: #060a11;
       color: #f8fafc;
-      overflow-x: hidden;
+      overflow-x: hidden !important;
       width: 100%;
-      max-width: 100%;
+      max-width: 100vw;
       margin: 0;
       padding: 0;
       position: relative;
       touch-action: pan-y;
       -webkit-text-size-adjust: 100%;
       text-size-adjust: 100%;
+      box-sizing: border-box;
+    }
+
+    /* Bulletproof Responsive Viewport Constraint: Prevent Any Horizontal Expansion */
+    main, section, header, footer {
+      max-width: 100% !important;
+      box-sizing: border-box !important;
     }
 
     /* Ambient Background Glow Spheres */
@@ -809,79 +817,104 @@
   </header>
 
   <!-- Main Content Container with Generous Mobile Bottom Padding (Prevents Dock Overlap) -->
-  <main class="relative z-10 max-w-5xl mx-auto px-3.5 sm:px-6 pt-4 pb-36 sm:pt-8 sm:pb-28 space-y-10 sm:space-y-16 flex-grow overflow-x-hidden">
+  <main class="relative z-10 max-w-5xl mx-auto px-3.5 sm:px-6 pt-4 pb-40 sm:pt-8 sm:pb-32 space-y-10 sm:space-y-16 flex-grow overflow-x-hidden">
 
     <!-- ============================================================
          1. ULTRA-SLEEK MODERN HERO & BENTO CONTACT HUB (BENTO.ME / APPLE STYLE)
          ============================================================ -->
-    <section class="reveal max-w-3xl mx-auto space-y-6 pt-2">
+    <section class="reveal w-full max-w-3xl mx-auto space-y-6 pt-1 px-1 sm:px-0">
 
-      <!-- TOP FOUNDER & AGENCY HERO IDENTITY (Clean, Centered, High-Converting) -->
-      <div class="text-center space-y-3.5">
+      <!-- ============================================================
+           0. INTRODUCTORY PORTFOLIO OVERVIEW (USER REQUEST: CLEAR INTRO HEADLINE & PURPOSE)
+           ============================================================ -->
+      <div class="text-center space-y-2.5 max-w-xl mx-auto px-2">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-400/25 text-emerald-400 font-mono text-[10px] sm:text-xs font-bold uppercase tracking-wider">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>FLUENT MEDIA &bull; EXECUTIVE GROWTH HUB</span>
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-extrabold text-white font-display tracking-tight leading-snug">
+          Performance Marketing &amp; Scalable Business Growth
+        </h1>
+        <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed max-w-md mx-auto">
+          Ye portfolio Fluent Media ka verified growth hub hai — jahan hum ambitious brands aur businesses ko high-ROAS Meta Ads, viral video reels aur predictable sales funnels ke zariye profitable tareeqay se scale karte hain.
+        </p>
+      </div>
+
+      <!-- ============================================================
+           1. FOUNDER PROFILE & IDENTITY CARD
+           ============================================================ -->
+      <div class="text-center space-y-3 pt-2">
         <!-- Glowing Circular Avatar -->
         <div class="flex justify-center">
           <div class="avatar-glow-ring">
-            <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-slate-900 bg-slate-800">
+            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-slate-900 bg-slate-800">
               <img src="https://files.catbox.moe/mhlqby.jpeg" alt="Zubair Jamil" class="w-full h-full object-cover" />
             </div>
           </div>
         </div>
 
-        <!-- Name & Badges -->
-        <div class="space-y-1.5">
+        <!-- Name & Responsive Badges (Wraps naturally on narrow screens - Zero overflow) -->
+        <div class="space-y-2">
           <div class="flex items-center justify-center gap-2">
-            <h1 class="text-2xl sm:text-3xl font-extrabold text-white font-display tracking-tight">
+            <h2 class="text-xl sm:text-2xl font-extrabold text-white font-display tracking-tight">
               Zubair Jamil
-            </h1>
-            <span class="w-5 h-5 rounded-full bg-sky-500 text-white flex items-center justify-center text-[10px] shadow-sm" title="Verified Founder">
+            </h2>
+            <span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-sky-500 text-white flex items-center justify-center text-[9px] sm:text-[10px] shadow-sm" title="Verified Founder">
               <i class="fa-solid fa-check"></i>
             </span>
           </div>
 
-          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-400/30 text-emerald-400 font-mono text-[10px] sm:text-xs font-bold uppercase tracking-wider">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span>FOUNDER &bull; HEAD GROWTH STRATEGIST &bull; ACADEMIC GOLD MEDALIST</span>
+          <!-- Responsive Badges Pill Group: Wraps on mobile to guarantee zero clipping -->
+          <div class="flex flex-wrap items-center justify-center gap-1.5 px-1 max-w-full">
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-400/30 text-emerald-400 font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              FOUNDER &bull; HEAD GROWTH STRATEGIST
+            </span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-500/10 border border-amber-400/30 text-amber-300 font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">
+              <i class="fa-solid fa-award text-amber-400 text-[10px]"></i>
+              ACADEMIC GOLD MEDALIST
+            </span>
           </div>
 
-          <p class="text-xs sm:text-sm text-slate-300 font-light max-w-lg mx-auto leading-relaxed px-2 pt-0.5">
-            Helping ambitious business owners &amp; brands scale profitably with high-ROAS Meta Ads, viral video reels &amp; predictable sales funnels.
+          <p class="text-xs text-slate-300 font-light max-w-md mx-auto leading-relaxed px-2">
+            Helping ambitious business owners &amp; brands scale profitably with high-ROAS Meta Ads &amp; predictable sales systems.
           </p>
         </div>
 
         <!-- Sleek 1-Row Quick Social / Channel Links -->
-        <div class="flex items-center justify-center gap-2 pt-1">
-          <a href="https://wa.me/923294357248" target="_blank" class="w-9 h-9 rounded-xl glass-card flex items-center justify-center text-emerald-400 hover:text-white hover:bg-emerald-600 transition-all text-sm" title="WhatsApp 1">
+        <div class="flex items-center justify-center gap-2 pt-1 flex-wrap">
+          <a href="https://wa.me/923294357248" target="_blank" class="w-9 h-9 rounded-xl glass-card flex items-center justify-center text-emerald-400 hover:text-white hover:bg-emerald-600 transition-all text-sm shadow-sm" title="WhatsApp 1">
             <i class="fa-brands fa-whatsapp"></i>
           </a>
-          <a href="tel:03294357248" class="w-9 h-9 rounded-xl glass-card flex items-center justify-center text-amber-400 hover:text-white hover:bg-amber-600 transition-all text-sm" title="Direct Phone Call">
+          <a href="tel:03294357248" class="w-9 h-9 rounded-xl glass-card flex items-center justify-center text-amber-400 hover:text-white hover:bg-amber-600 transition-all text-sm shadow-sm" title="Direct Phone Call">
             <i class="fa-solid fa-phone"></i>
           </a>
-          <a href="https://www.fiverr.com/s/K3ezqqW" target="_blank" class="w-9 h-9 rounded-xl glass-card flex items-center justify-center text-emerald-400 hover:text-white hover:bg-emerald-600 transition-all text-xs font-bold font-mono" title="Fiverr Profile">
+          <a href="https://www.fiverr.com/s/K3ezqqW" target="_blank" class="w-9 h-9 rounded-xl glass-card flex items-center justify-center text-emerald-400 hover:text-white hover:bg-emerald-600 transition-all text-xs font-bold font-mono shadow-sm" title="Fiverr Profile">
             fi.
           </a>
-          <a href="https://fluent-media-marketing-bg11.vercel.app/" target="_blank" class="w-9 h-9 rounded-xl glass-card flex items-center justify-center text-sky-400 hover:text-white hover:bg-sky-600 transition-all text-sm" title="Official Website">
+          <a href="https://fluent-media-marketing-bg11.vercel.app/" target="_blank" class="w-9 h-9 rounded-xl glass-card flex items-center justify-center text-sky-400 hover:text-white hover:bg-sky-600 transition-all text-sm shadow-sm" title="Official Website">
             <i class="fa-solid fa-globe"></i>
           </a>
-          <a href="mailto:info.zubairansari@gmail.com" class="w-9 h-9 rounded-xl glass-card flex items-center justify-center text-purple-400 hover:text-white hover:bg-purple-600 transition-all text-sm" title="Email Us">
+          <a href="mailto:info.zubairansari@gmail.com" class="w-9 h-9 rounded-xl glass-card flex items-center justify-center text-purple-400 hover:text-white hover:bg-purple-600 transition-all text-sm shadow-sm" title="Email Us">
             <i class="fa-solid fa-envelope"></i>
           </a>
         </div>
       </div>
 
       <!-- ============================================================
-           MODERN BENTO GRID: 4 TACTILE GLASS TILES (RESPONSIVE ON MOBILE & DESKTOP)
+           2. MODERN BENTO GRID: 4 TACTILE GLASS TILES (RESPONSIVE, ZERO-OVERFLOW)
            ============================================================ -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 pt-1">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 pt-1 w-full max-w-full">
 
         <!-- BENTO TILE 1: FOUNDER STRATEGY DESK -->
-        <div class="bento-tile group relative overflow-hidden rounded-2xl p-4 sm:p-5 border border-emerald-500/25 hover:border-emerald-400/50 shadow-lg hover:shadow-emerald-950/40 transition-all duration-300 flex flex-col justify-between">
-          <div class="space-y-2.5">
+        <div class="bento-tile group relative overflow-hidden rounded-2xl p-4 sm:p-5 border border-emerald-500/25 hover:border-emerald-400/50 shadow-lg hover:shadow-emerald-950/40 transition-all duration-300 flex flex-col justify-between w-full max-w-full box-border">
+          <div class="space-y-2">
             <div class="flex items-center justify-between">
-              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 font-mono text-[10px] font-bold uppercase tracking-wider">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                 LINE 1 &bull; FOUNDER DESK
               </span>
-              <div class="w-8 h-8 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-sm group-hover:scale-110 transition-transform">
+              <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs sm:text-sm group-hover:scale-110 transition-transform">
                 <i class="fa-solid fa-phone-volume"></i>
               </div>
             </div>
@@ -892,23 +925,26 @@
               </p>
             </div>
           </div>
-          <div class="pt-3.5 mt-2 border-t border-white/5 flex items-center justify-between">
-            <span class="font-mono text-xs sm:text-sm font-bold text-emerald-400">0329 4357248</span>
-            <a href="tel:03294357248" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-xs font-bold transition-all shadow-md shadow-emerald-950">
-              <i class="fa-solid fa-phone text-[10px]"></i> Direct Call
+          <div class="pt-3 mt-3 border-t border-white/10 flex items-center justify-between gap-2 min-w-0">
+            <div class="flex items-center gap-1.5 min-w-0">
+              <i class="fa-solid fa-phone text-emerald-400 text-xs flex-shrink-0"></i>
+              <span class="font-mono text-xs sm:text-sm font-bold text-emerald-400 truncate">0329 4357248</span>
+            </div>
+            <a href="tel:03294357248" class="flex-shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-mono text-xs font-bold transition-all shadow-md shadow-emerald-950/40">
+              <span>Direct Call</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </a>
           </div>
         </div>
 
         <!-- BENTO TILE 2: CLIENT OPERATIONS & WHATSAPP DESK -->
-        <div class="bento-tile group relative overflow-hidden rounded-2xl p-4 sm:p-5 border border-cyan-500/25 hover:border-cyan-400/50 shadow-lg hover:shadow-cyan-950/40 transition-all duration-300 flex flex-col justify-between">
-          <div class="space-y-2.5">
+        <div class="bento-tile group relative overflow-hidden rounded-2xl p-4 sm:p-5 border border-cyan-500/25 hover:border-cyan-400/50 shadow-lg hover:shadow-cyan-950/40 transition-all duration-300 flex flex-col justify-between w-full max-w-full box-border">
+          <div class="space-y-2">
             <div class="flex items-center justify-between">
-              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-cyan-500/10 border border-cyan-500/25 text-cyan-400 font-mono text-[10px] font-bold uppercase tracking-wider">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-cyan-500/10 border border-cyan-500/25 text-cyan-400 font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">
                 <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
                 LINE 2 &bull; WHATSAPP DESK
               </span>
-              <div class="w-8 h-8 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center text-sm group-hover:scale-110 transition-transform">
+              <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center text-xs sm:text-sm group-hover:scale-110 transition-transform">
                 <i class="fa-brands fa-whatsapp"></i>
               </div>
             </div>
@@ -919,23 +955,26 @@
               </p>
             </div>
           </div>
-          <div class="pt-3.5 mt-2 border-t border-white/5 flex items-center justify-between">
-            <span class="font-mono text-xs sm:text-sm font-bold text-cyan-400">0318 4628170</span>
-            <a href="https://wa.me/923184628170?text=Salam%20Fluent%20Media!%20Mujhe%20campaign%20support%20chahiye." target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-mono text-xs font-bold transition-all shadow-md shadow-cyan-950">
-              <i class="fa-brands fa-whatsapp text-xs"></i> WhatsApp
+          <div class="pt-3 mt-3 border-t border-white/10 flex items-center justify-between gap-2 min-w-0">
+            <div class="flex items-center gap-1.5 min-w-0">
+              <i class="fa-brands fa-whatsapp text-cyan-400 text-sm flex-shrink-0"></i>
+              <span class="font-mono text-xs sm:text-sm font-bold text-cyan-400 truncate">0318 4628170</span>
+            </div>
+            <a href="https://wa.me/923184628170?text=Salam%20Fluent%20Media!%20Mujhe%20campaign%20support%20chahiye." target="_blank" class="flex-shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-cyan-600 hover:bg-cyan-500 active:scale-95 text-white font-mono text-xs font-bold transition-all shadow-md shadow-cyan-950/40">
+              <span>WhatsApp</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </a>
           </div>
         </div>
 
         <!-- BENTO TILE 3: VIP PRIVATE LINE & HIGH-ROAS SCALING -->
-        <div class="bento-tile group relative overflow-hidden rounded-2xl p-4 sm:p-5 border border-amber-500/25 hover:border-amber-400/50 shadow-lg hover:shadow-amber-950/40 transition-all duration-300 flex flex-col justify-between">
-          <div class="space-y-2.5">
+        <div class="bento-tile group relative overflow-hidden rounded-2xl p-4 sm:p-5 border border-amber-500/25 hover:border-amber-400/50 shadow-lg hover:shadow-amber-950/40 transition-all duration-300 flex flex-col justify-between w-full max-w-full box-border">
+          <div class="space-y-2">
             <div class="flex items-center justify-between">
-              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-amber-500/10 border border-amber-500/25 text-amber-400 font-mono text-[10px] font-bold uppercase tracking-wider">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-amber-500/10 border border-amber-500/25 text-amber-400 font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">
                 <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
                 LINE 3 &bull; VIP SCALING DESK
               </span>
-              <div class="w-8 h-8 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center text-sm group-hover:scale-110 transition-transform">
+              <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center text-xs sm:text-sm group-hover:scale-110 transition-transform">
                 <i class="fa-solid fa-crown"></i>
               </div>
             </div>
@@ -946,23 +985,26 @@
               </p>
             </div>
           </div>
-          <div class="pt-3.5 mt-2 border-t border-white/5 flex items-center justify-between">
-            <span class="font-mono text-xs sm:text-sm font-bold text-amber-400">0327 1000050</span>
-            <a href="https://wa.me/923271000050?text=Salam%20Zubair!%20Connecting%20for%20VIP%20Retainer%20Scaling." target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-mono text-xs font-bold transition-all shadow-md shadow-amber-950">
-              <i class="fa-brands fa-whatsapp text-xs"></i> VIP Line
+          <div class="pt-3 mt-3 border-t border-white/10 flex items-center justify-between gap-2 min-w-0">
+            <div class="flex items-center gap-1.5 min-w-0">
+              <i class="fa-solid fa-phone text-amber-400 text-xs flex-shrink-0"></i>
+              <span class="font-mono text-xs sm:text-sm font-bold text-amber-400 truncate">0327 1000050</span>
+            </div>
+            <a href="https://wa.me/923271000050?text=Salam%20Zubair!%20Connecting%20for%20VIP%20Retainer%20Scaling." target="_blank" class="flex-shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-600 hover:bg-amber-500 active:scale-95 text-white font-mono text-xs font-bold transition-all shadow-md shadow-amber-950/40">
+              <span>VIP Line</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </a>
           </div>
         </div>
 
         <!-- BENTO TILE 4: GLOBAL FREELANCE & FIVERR ESCROW -->
-        <div class="bento-tile group relative overflow-hidden rounded-2xl p-4 sm:p-5 border border-emerald-500/25 hover:border-emerald-400/50 shadow-lg hover:shadow-emerald-950/40 transition-all duration-300 flex flex-col justify-between">
-          <div class="space-y-2.5">
+        <div class="bento-tile group relative overflow-hidden rounded-2xl p-4 sm:p-5 border border-emerald-500/25 hover:border-emerald-400/50 shadow-lg hover:shadow-emerald-950/40 transition-all duration-300 flex flex-col justify-between w-full max-w-full box-border">
+          <div class="space-y-2">
             <div class="flex items-center justify-between">
-              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 font-mono text-[10px] font-bold uppercase tracking-wider">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                 GLOBAL FREELANCE &bull; ESCROW
               </span>
-              <div class="w-8 h-8 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-black font-mono group-hover:scale-110 transition-transform">
+              <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-black font-mono group-hover:scale-110 transition-transform">
                 fi.
               </div>
             </div>
@@ -973,10 +1015,10 @@
               </p>
             </div>
           </div>
-          <div class="pt-3.5 mt-2 border-t border-white/5 flex items-center justify-between">
-            <span class="font-mono text-xs sm:text-sm font-bold text-emerald-400">⭐ 5.0 Star Verified</span>
-            <a href="https://www.fiverr.com/s/K3ezqqW" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-white/20 text-emerald-400 font-mono text-xs font-bold transition-all shadow-md">
-              Order on Fiverr &rarr;
+          <div class="pt-3 mt-3 border-t border-white/10 flex items-center justify-between gap-2 min-w-0">
+            <span class="font-mono text-xs font-bold text-emerald-400 truncate">⭐ 5.0 Star Verified</span>
+            <a href="https://www.fiverr.com/s/K3ezqqW" target="_blank" class="flex-shrink-0 inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 active:scale-95 border border-white/20 text-emerald-400 font-mono text-xs font-bold transition-all shadow-md">
+              <span>Order on Fiverr</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </a>
           </div>
         </div>
@@ -1005,7 +1047,7 @@
       <!-- Top Section Header -->
       <div class="text-center space-y-2">
         <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-400/30 text-emerald-400 font-mono text-[10px] uppercase tracking-widest font-bold">
-          STRATEGIC BUSINESS BLUEPRINTS &bull; INTERACTIVE SWITCH
+          GROWTH BLUEPRINTS &bull; INTERACTIVE SWITCH
         </span>
         <h3 class="text-2xl sm:text-3xl font-extrabold text-white font-display">
           Business Growth Insights & Visual Execution
